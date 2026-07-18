@@ -2,10 +2,10 @@
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v0.1**
+- Version: **v0.2**
 - Last updated: **July 2026**
 - License: **MIT**
-- Total skills (all category repos): **311**
+- Total skills (all category repos): **319**
 
 > **How to use this repo:** Browse the index below to find the skill you need, then go to that category repo and download only what you want. No bloat.
 
@@ -15,17 +15,23 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 | Category | Repository | Skills |
 |----------|------------|--------|
-| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 81 |
-| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 56 |
+| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 82 |
+| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 57 |
 | Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 53 |
 | Design | [skills-design](https://github.com/prvthmpcypher/skills-design) | 26 |
-| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 27 |
+| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 26 |
 | Game Dev | [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) | 20 |
-| Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 13 |
-| Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 10 |
-| Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 9 |
+| Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 14 |
+| Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 11 |
+| Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 10 |
 | Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 11 |
-| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 5 |
+| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 7 |
+| Meta | skills-meta | 2 |
+## Meta
+
+`skills-meta` holds skills that operate on the library itself rather than a domain:
+- **skill-router** — finds the right skill + repo for a described task, with the install command.
+- **skill-linter** — checks a draft SKILL.md against house conventions before it's committed.
 
 ---
 
