@@ -2,7 +2,7 @@
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v0.2**
+- Version: **v0.3**
 - Last updated: **July 2026**
 - License: **MIT**
 - Total skills (all category repos): **342**
@@ -88,6 +88,7 @@ skill-id/
 | `blockchain-security-auditor` | Blockchain Security Auditor |
 | `bug-explainer` | Bug Explainer |
 | `changelog-writer` | Changelog Writer |
+| `ci-cd-pipeline-builder` | CI/CD Pipeline Builder |
 | `ci-cd-pipeline-builder` | CI/CD Pipeline Builder |
 | `cloud-security-architect` | Cloud Security Architect |
 | `cms-developer` | CMS Developer |
@@ -200,6 +201,7 @@ skill-id/
 | `launch-week-planner` | Launch Week Planner |
 | `linkedin-content-creator` | LinkedIn Content Creator |
 | `livestream-commerce-coach` | Livestream Commerce Coach |
+| `meta-ads-copywriter` | Meta Ads Copywriter |
 | `meta-ads-copywriter` | Meta Ads Copywriter |
 | `multi-platform-publisher` | Multi-Platform Publisher |
 | `newsletter-writer` | Newsletter Writer |
@@ -384,9 +386,11 @@ skill-id/
 | `unreal-world-builder` | Unreal World Builder |
 
 ### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (14 skills)
+### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (14 skills)
 
 | Skill ID | Title |
 |----------|-------|
+| `citation-formatter` | Citation Formatter |
 | `citation-formatter` | Citation Formatter |
 | `concept-explainer` | Concept Explainer |
 | `essay-structurer` | Essay Structurer |
@@ -403,10 +407,12 @@ skill-id/
 | `study-plan-builder` | Study Plan Builder |
 
 ### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (11 skills)
+### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (11 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `financial-plan-starter` | Financial Plan Starter |
+| `fitness-nutrition-planner` | Fitness & Nutrition Planner |
 | `fitness-nutrition-planner` | Fitness & Nutrition Planner |
 | `habit-tracker-designer` | Habit Tracker Designer |
 | `know-me` | Know Me |
@@ -419,6 +425,7 @@ skill-id/
 | `year-review-system` | Year Review System |
 
 ### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (10 skills)
+### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (10 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -428,6 +435,7 @@ skill-id/
 | `ebook-chapter-writer` | Ebook Chapter Writer |
 | `ghostwriter` | Ghostwriter |
 | `press-release-writer` | Press Release Writer |
+| `screenplay-writer` | Screenplay Writer |
 | `screenplay-writer` | Screenplay Writer |
 | `story-hook-writer` | Story Hook Writer |
 | `technical-writer` | Technical Writer |
