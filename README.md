@@ -5,7 +5,7 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 - Version: **v0.2**
 - Last updated: **July 2026**
 - License: **MIT**
-- Total skills (all category repos): **319**
+- Total skills (all category repos): **342**
 
 > **How to use this repo:** Browse the index below to find the skill you need, then go to that category repo and download only what you want. No bloat.
 
@@ -15,18 +15,18 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 | Category | Repository | Skills |
 |----------|------------|--------|
-| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 82 |
-| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 57 |
-| Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 53 |
-| Design | [skills-design](https://github.com/prvthmpcypher/skills-design) | 26 |
-| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 26 |
-| Game Dev | [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) | 20 |
+| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 88 |
+| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 60 |
+| Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 55 |
+| Design | [skills-design](https://github.com/prvthmpcypher/skills-design) | 29 |
+| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 29 |
+| Game Dev | [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) | 22 |
 | Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 14 |
 | Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 11 |
 | Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 10 |
-| Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 11 |
-| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 7 |
-| Meta | skills-meta | 2 |
+| Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 13 |
+| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 9 |
+| Meta | [skills-meta](https://github.com/prvthmpcypher/skills-meta) | 2 |
 ## Meta
 
 `skills-meta` holds skills that operate on the library itself rather than a domain:
@@ -70,7 +70,7 @@ skill-id/
 
 ## Full skill index
 
-### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (81 skills)
+### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (88 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -78,6 +78,7 @@ skill-id/
 | `accessibility-checker` | Accessibility Checker |
 | `ai-data-remediation-engineer` | AI Data Remediation Engineer |
 | `ai-engineer` | AI Engineer |
+| `android-developer` | Android Developer |
 | `api-doc-writer` | API Doc Writer |
 | `api-mock-generator` | API Mock Generator |
 | `api-tester` | API Tester |
@@ -87,6 +88,7 @@ skill-id/
 | `blockchain-security-auditor` | Blockchain Security Auditor |
 | `bug-explainer` | Bug Explainer |
 | `changelog-writer` | Changelog Writer |
+| `ci-cd-pipeline-builder` | CI/CD Pipeline Builder |
 | `cloud-security-architect` | Cloud Security Architect |
 | `cms-developer` | CMS Developer |
 | `code-comment-writer` | Code Comment Writer |
@@ -101,6 +103,7 @@ skill-id/
 | `data-engineer` | Data Engineer |
 | `database-optimizer` | Database Optimizer |
 | `database-schema-designer` | Database Schema Designer |
+| `dependency-upgrade-auditor` | Dependency Upgrade Auditor |
 | `deployment-checklist` | Deployment Checklist |
 | `devops-automator` | DevOps Automator |
 | `drupal-shopping-cart` | Drupal Shopping Cart |
@@ -114,9 +117,13 @@ skill-id/
 | `frontend-developer` | Frontend Developer |
 | `git-commit-writer` | Git Commit Writer |
 | `git-workflow-master` | Git Workflow Master |
+| `graphql-api-designer` | GraphQL API Designer |
+| `iac-provisioner` | Infrastructure-as-Code Provisioner |
 | `incident-responder` | Incident Responder |
 | `incident-response-commander` | Incident Response Commander |
+| `ios-developer` | iOS Developer |
 | `it-service-manager` | IT Service Manager |
+| `load-testing-engineer` | Load Testing Engineer |
 | `minimal-change-engineer` | Minimal Change Engineer |
 | `mobile-app-builder` | Mobile App Builder |
 | `monorepo-planner` | Monorepo Planner |
@@ -156,7 +163,7 @@ skill-id/
 | `wordpress-shopping-cart` | WordPress Shopping Cart |
 | `workflow-optimizer` | Workflow Optimizer |
 
-### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (56 skills)
+### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (60 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -177,6 +184,7 @@ skill-id/
 | `content-calendar-builder` | Content Calendar Builder |
 | `content-creator` | Content Creator |
 | `content-repurposer` | Content Repurposer |
+| `conversion-rate-optimizer` | Conversion Rate Optimizer |
 | `cross-border-e-commerce-specialist` | Cross-Border E-Commerce Specialist |
 | `douyin-strategist` | Douyin Strategist |
 | `email-strategist` | Email Strategist |
@@ -184,6 +192,7 @@ skill-id/
 | `google-ads-copywriter` | Google Ads Copywriter |
 | `growth-hacker` | Growth Hacker |
 | `hashtag-researcher` | Hashtag Researcher |
+| `influencer-outreach-strategist` | Influencer Outreach Strategist |
 | `instagram-curator` | Instagram Curator |
 | `instantly-campaign` | Instantly Campaign |
 | `kuaishou-strategist` | Kuaishou Strategist |
@@ -191,8 +200,10 @@ skill-id/
 | `launch-week-planner` | Launch Week Planner |
 | `linkedin-content-creator` | LinkedIn Content Creator |
 | `livestream-commerce-coach` | Livestream Commerce Coach |
+| `meta-ads-copywriter` | Meta Ads Copywriter |
 | `multi-platform-publisher` | Multi-Platform Publisher |
 | `newsletter-writer` | Newsletter Writer |
+| `pinterest-strategist` | Pinterest Strategist |
 | `podcast-pitch-writer` | Podcast Pitch Writer |
 | `podcast-strategist` | Podcast Strategist |
 | `pr-and-communications-manager` | PR & Communications Manager |
@@ -217,7 +228,7 @@ skill-id/
 | `youtube-clipper` | YouTube Clipper |
 | `zhihu-strategist` | Zhihu Strategist |
 
-### Specialized — [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) (53 skills)
+### Specialized — [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) (55 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -244,6 +255,7 @@ skill-id/
 | `grant-writer` | Grant Writer |
 | `healthcare-customer-service` | Healthcare Customer Service |
 | `healthcare-marketing-compliance-specialist` | Healthcare Marketing Compliance Specialist |
+| `hiring-plan-org-chart-builder` | Hiring Plan & Org Chart Builder |
 | `hospitality-guest-services` | Hospitality Guest Services |
 | `hr-onboarding` | HR Onboarding |
 | `identity-graph-operator` | Identity Graph Operator |
@@ -264,6 +276,7 @@ skill-id/
 | `pricing-analyst` | Pricing Analyst |
 | `real-estate-buyer-and-seller` | Real Estate Buyer & Seller |
 | `recruitment-specialist` | Recruitment Specialist |
+| `regulatory-compliance-officer` | Regulatory Compliance Officer |
 | `report-distribution-agent` | Report Distribution Agent |
 | `retail-customer-returns` | Retail Customer Returns |
 | `sales-data-extraction-agent` | Sales Data Extraction Agent |
@@ -275,7 +288,7 @@ skill-id/
 | `workflow-architect` | Workflow Architect |
 | `zk-steward` | ZK Steward |
 
-### Design — [skills-design](https://github.com/prvthmpcypher/skills-design) (26 skills)
+### Design — [skills-design](https://github.com/prvthmpcypher/skills-design) (29 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -293,7 +306,10 @@ skill-id/
 | `icon-brief-writer` | Icon Brief Writer |
 | `image-prompt-engineer` | Image Prompt Engineer |
 | `inclusive-visuals-specialist` | Inclusive Visuals Specialist |
+| `logo-brand-mark-designer` | Logo & Brand Mark Designer |
+| `motion-graphics-producer` | Motion Graphics Producer |
 | `onboarding-flow-designer` | Onboarding Flow Designer |
+| `print-packaging-designer` | Print & Packaging Designer |
 | `responsive-breakpoint-advisor` | Responsive Breakpoint Advisor |
 | `typography-system-builder` | Typography System Builder |
 | `ui-designer` | UI Designer |
@@ -306,10 +322,11 @@ skill-id/
 | `youtube-popup-graphic` | YouTube Popup Graphic |
 | `youtube-thumbnail-maker` | YouTube Thumbnail Maker |
 
-### Business — [skills-business](https://github.com/prvthmpcypher/skills-business) (27 skills)
+### Business — [skills-business](https://github.com/prvthmpcypher/skills-business) (29 skills)
 
 | Skill ID | Title |
 |----------|-------|
+| `board-deck-builder` | Board Deck Builder |
 | `business-plan-outliner` | Business Plan Outliner |
 | `client-proposal-writer` | Client Proposal Writer |
 | `contract-clause-explainer` | Contract Clause Explainer |
@@ -336,20 +353,23 @@ skill-id/
 | `trend-researcher` | Trend Researcher |
 | `upwork` | Upwork |
 | `upwork-proposal` | Upwork Proposal |
+| `vendor-procurement-manager` | Vendor & Procurement Manager |
 | `weekly-review-system` | Weekly Review System |
 
-### Game Dev — [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) (20 skills)
+### Game Dev — [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) (22 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `blender-add-on-engineer` | Blender Add-on Engineer |
 | `game-audio-engineer` | Game Audio Engineer |
 | `game-designer` | Game Designer |
+| `game-monetization-designer` | Game Monetization Designer |
 | `godot-gameplay-scripter` | Godot Gameplay Scripter |
 | `godot-multiplayer-engineer` | Godot Multiplayer Engineer |
 | `godot-shader-developer` | Godot Shader Developer |
 | `level-designer` | Level Designer |
 | `narrative-designer` | Narrative Designer |
+| `playtest-feedback-analyzer` | Playtest Feedback Analyzer |
 | `roblox-avatar-creator` | Roblox Avatar Creator |
 | `roblox-experience-designer` | Roblox Experience Designer |
 | `roblox-systems-scripter` | Roblox Systems Scripter |
@@ -363,10 +383,11 @@ skill-id/
 | `unreal-technical-artist` | Unreal Technical Artist |
 | `unreal-world-builder` | Unreal World Builder |
 
-### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (13 skills)
+### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (14 skills)
 
 | Skill ID | Title |
 |----------|-------|
+| `citation-formatter` | Citation Formatter |
 | `concept-explainer` | Concept Explainer |
 | `essay-structurer` | Essay Structurer |
 | `exam-question-generator` | Exam Question Generator |
@@ -381,11 +402,12 @@ skill-id/
 | `skill-roadmap-builder` | Skill Roadmap Builder |
 | `study-plan-builder` | Study Plan Builder |
 
-### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (10 skills)
+### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (11 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `financial-plan-starter` | Financial Plan Starter |
+| `fitness-nutrition-planner` | Fitness & Nutrition Planner |
 | `habit-tracker-designer` | Habit Tracker Designer |
 | `know-me` | Know Me |
 | `linkedin-profile-optimizer` | LinkedIn Profile Optimizer |
@@ -396,7 +418,7 @@ skill-id/
 | `travel-planner` | Travel Planner |
 | `year-review-system` | Year Review System |
 
-### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (9 skills)
+### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (10 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -406,16 +428,18 @@ skill-id/
 | `ebook-chapter-writer` | Ebook Chapter Writer |
 | `ghostwriter` | Ghostwriter |
 | `press-release-writer` | Press Release Writer |
+| `screenplay-writer` | Screenplay Writer |
 | `story-hook-writer` | Story Hook Writer |
 | `technical-writer` | Technical Writer |
 | `thread-to-blog-converter` | Thread to Blog Converter |
 
-### Sales & Support — [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) (11 skills)
+### Sales & Support — [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) (13 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `account-strategist` | Account Strategist |
 | `analytics-reporter` | Analytics Reporter |
+| `churn-analyst` | Churn Analyst |
 | `discovery-coach` | Discovery Coach |
 | `executive-summary-generator` | Executive Summary Generator |
 | `finance-tracker` | Finance Tracker |
@@ -423,16 +447,21 @@ skill-id/
 | `outbound-strategist` | Outbound Strategist |
 | `pipeline-analyst` | Pipeline Analyst |
 | `proposal-strategist` | Proposal Strategist |
+| `renewal-strategist` | Renewal Strategist |
 | `sales-coach` | Sales Coach |
 | `sales-engineer` | Sales Engineer |
 
-### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (5 skills)
+### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (9 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `bookkeeper-and-controller` | Bookkeeper & Controller |
+| `budget-expense-auditor` | Budget & Expense Auditor |
+| `cap-table-fundraising-modeler` | Cap Table & Fundraising Modeler |
+| `crypto-tax-specialist` | Crypto Tax Specialist |
 | `financial-analyst` | Financial Analyst |
 | `fp-and-a-analyst` | FP&A Analyst |
+| `insurance-actuary-analyst` | Insurance & Actuarial Analyst |
 | `investment-researcher` | Investment Researcher |
 | `tax-strategist` | Tax Strategist |
 
@@ -441,3 +470,4 @@ skill-id/
 ## Author
 
 Copyright (c) 2026 Poorvith M P · MIT License
+Follow the build: [@poorvith_mp](https://x.com/poorvith_mp)
