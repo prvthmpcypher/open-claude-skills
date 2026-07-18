@@ -2,10 +2,10 @@
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v0.2**
+- Version: **v0.3**
 - Last updated: **July 2026**
 - License: **MIT**
-- Total skills (all category repos): **319**
+- Total skills (all category repos): **321**
 
 > **How to use this repo:** Browse the index below to find the skill you need, then go to that category repo and download only what you want. No bloat.
 
@@ -15,18 +15,18 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 | Category | Repository | Skills |
 |----------|------------|--------|
-| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 82 |
+| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 83 |
 | Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 57 |
 | Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 53 |
 | Design | [skills-design](https://github.com/prvthmpcypher/skills-design) | 26 |
-| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 26 |
+| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 27 |
 | Game Dev | [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) | 20 |
 | Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 14 |
 | Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 11 |
 | Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 10 |
 | Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 11 |
 | Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 7 |
-| Meta | skills-meta | 2 |
+| Meta | [skills-meta](https://github.com/prvthmpcypher/skills-meta) | 2 |
 ## Meta
 
 `skills-meta` holds skills that operate on the library itself rather than a domain:
@@ -70,7 +70,7 @@ skill-id/
 
 ## Full skill index
 
-### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (81 skills)
+### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (83 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -87,6 +87,7 @@ skill-id/
 | `blockchain-security-auditor` | Blockchain Security Auditor |
 | `bug-explainer` | Bug Explainer |
 | `changelog-writer` | Changelog Writer |
+| `ci-cd-pipeline-builder` | CI/CD Pipeline Builder |
 | `cloud-security-architect` | Cloud Security Architect |
 | `cms-developer` | CMS Developer |
 | `code-comment-writer` | Code Comment Writer |
@@ -114,6 +115,7 @@ skill-id/
 | `frontend-developer` | Frontend Developer |
 | `git-commit-writer` | Git Commit Writer |
 | `git-workflow-master` | Git Workflow Master |
+| `iac-provisioner` | Infrastructure-as-Code Provisioner |
 | `incident-responder` | Incident Responder |
 | `incident-response-commander` | Incident Response Commander |
 | `it-service-manager` | IT Service Manager |
@@ -156,7 +158,7 @@ skill-id/
 | `wordpress-shopping-cart` | WordPress Shopping Cart |
 | `workflow-optimizer` | Workflow Optimizer |
 
-### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (56 skills)
+### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (57 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -191,6 +193,7 @@ skill-id/
 | `launch-week-planner` | Launch Week Planner |
 | `linkedin-content-creator` | LinkedIn Content Creator |
 | `livestream-commerce-coach` | Livestream Commerce Coach |
+| `meta-ads-copywriter` | Meta Ads Copywriter |
 | `multi-platform-publisher` | Multi-Platform Publisher |
 | `newsletter-writer` | Newsletter Writer |
 | `podcast-pitch-writer` | Podcast Pitch Writer |
@@ -363,10 +366,11 @@ skill-id/
 | `unreal-technical-artist` | Unreal Technical Artist |
 | `unreal-world-builder` | Unreal World Builder |
 
-### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (13 skills)
+### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (14 skills)
 
 | Skill ID | Title |
 |----------|-------|
+| `citation-formatter` | Citation Formatter |
 | `concept-explainer` | Concept Explainer |
 | `essay-structurer` | Essay Structurer |
 | `exam-question-generator` | Exam Question Generator |
@@ -381,11 +385,12 @@ skill-id/
 | `skill-roadmap-builder` | Skill Roadmap Builder |
 | `study-plan-builder` | Study Plan Builder |
 
-### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (10 skills)
+### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (11 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `financial-plan-starter` | Financial Plan Starter |
+| `fitness-nutrition-planner` | Fitness & Nutrition Planner |
 | `habit-tracker-designer` | Habit Tracker Designer |
 | `know-me` | Know Me |
 | `linkedin-profile-optimizer` | LinkedIn Profile Optimizer |
@@ -396,7 +401,7 @@ skill-id/
 | `travel-planner` | Travel Planner |
 | `year-review-system` | Year Review System |
 
-### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (9 skills)
+### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (10 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -406,6 +411,7 @@ skill-id/
 | `ebook-chapter-writer` | Ebook Chapter Writer |
 | `ghostwriter` | Ghostwriter |
 | `press-release-writer` | Press Release Writer |
+| `screenplay-writer` | Screenplay Writer |
 | `story-hook-writer` | Story Hook Writer |
 | `technical-writer` | Technical Writer |
 | `thread-to-blog-converter` | Thread to Blog Converter |
@@ -426,11 +432,13 @@ skill-id/
 | `sales-coach` | Sales Coach |
 | `sales-engineer` | Sales Engineer |
 
-### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (5 skills)
+### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (7 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `bookkeeper-and-controller` | Bookkeeper & Controller |
+| `budget-expense-auditor` | Budget & Expense Auditor |
+| `cap-table-fundraising-modeler` | Cap Table & Fundraising Modeler |
 | `financial-analyst` | Financial Analyst |
 | `fp-and-a-analyst` | FP&A Analyst |
 | `investment-researcher` | Investment Researcher |
