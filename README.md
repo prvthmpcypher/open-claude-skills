@@ -2,10 +2,10 @@
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v0.2**
-- Last updated: **July 2026**
+- Version: **v2.0 (Audited & Modernized)**
+- Last updated: **August 2026**
 - License: **MIT**
-- Total skills (all category repos): **342**
+- Total skills (all category repos): **315**
 
 > **How to use this repo:** Browse the index below to find the skill you need, then go to that category repo and download only what you want. No bloat.
 
@@ -15,23 +15,25 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 | Category | Repository | Skills |
 |----------|------------|--------|
-| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 88 |
-| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 60 |
-| Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 55 |
+| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 80 |
+| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 52 |
+| Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 41 |
 | Design | [skills-design](https://github.com/prvthmpcypher/skills-design) | 29 |
 | Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 29 |
 | Game Dev | [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) | 22 |
-| Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 14 |
-| Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 11 |
-| Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 10 |
-| Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 13 |
-| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 9 |
-| Meta | [skills-meta](https://github.com/prvthmpcypher/skills-meta) | 2 |
+| Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 17 |
+| Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 15 |
+| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 12 |
+| Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 10 |
+| Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 5 |
+| Meta | [skills-meta](https://github.com/prvthmpcypher/skills-meta) | 3 |
+
 ## Meta
 
 `skills-meta` holds skills that operate on the library itself rather than a domain:
 - **skill-router** — finds the right skill + repo for a described task, with the install command.
 - **skill-linter** — checks a draft SKILL.md against house conventions before it's committed.
+- **prompt-library-curator** — maintains versioned prompt template libraries across teams.
 
 ---
 
@@ -39,11 +41,12 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 ### Claude Code
 ```bash
-# copy one skill into your personal Claude config
 cp -R skills/<skill-id> ~/.claude/skills/<skill-id>
+```
 
-# or project-local
-cp -R skills/<skill-id> .claude/skills/<skill-id>
+### Antigravity IDE (Google Gemini)
+```bash
+cp -R skills/<skill-id> .agents/skills/<skill-id>
 ```
 
 ### Claude.ai
@@ -53,240 +56,212 @@ Zip a single `skills/<skill-id>` folder and upload via **Settings → Capabiliti
 
 ## Conventions
 
-All skills follow Anthropic **skill-creator** layout:
+All skills adhere to the official **Agent Skills Specification** (`agentskills.io`):
 
 ```text
 skill-id/
-├── SKILL.md
-├── references/NOTE.md
-└── assets/NOTE.md
+├── SKILL.md       # Metadata + Progressive execution instructions
+├── references/    # Optional: Deep domain references (loaded on-demand)
+├── scripts/       # Optional: Executable automation scripts
+└── assets/        # Optional: Schemas, templates, fixtures
 ```
 
-- Trigger-rich `description` frontmatter
-- Imperative instructions
-- No third-party credits or personal paths
+**Quality standards enforced in v2.0:**
+- Trigger-rich `description` frontmatter with explicit invocation conditions
+- Progressive disclosure: core instructions in `SKILL.md` (<500 lines)
+- Built-in `## Verification & Quality Checklist` for every skill
+- Built-in `## Anti-Patterns & Constraints` negative boundaries
+- Zero third-party credits, personal paths, or empty placeholder boilerplate
 
 ---
 
 ## Full skill index
 
-### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (88 skills)
+### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (80 skills)
 
 | Skill ID | Title |
 |----------|-------|
-| `accessibility-auditor` | Accessibility Auditor |
-| `accessibility-checker` | Accessibility Checker |
+| `accessibility-engineer` | Accessibility Engineer |
 | `ai-data-remediation-engineer` | AI Data Remediation Engineer |
 | `ai-engineer` | AI Engineer |
+| `ai-eval-suite-builder` | AI Eval Suite Builder |
 | `android-developer` | Android Developer |
-| `api-doc-writer` | API Doc Writer |
-| `api-mock-generator` | API Mock Generator |
-| `api-tester` | API Tester |
-| `application-security-engineer` | Application Security Engineer |
+| `api-lifecycle-engineer` | API Lifecycle Engineer |
+| `appsec-architect` | Appsec Architect |
 | `autonomous-optimization-architect` | Autonomous Optimization Architect |
 | `backend-architect` | Backend Architect |
 | `blockchain-security-auditor` | Blockchain Security Auditor |
 | `bug-explainer` | Bug Explainer |
 | `changelog-writer` | Changelog Writer |
-| `ci-cd-pipeline-builder` | CI/CD Pipeline Builder |
-| `ci-cd-pipeline-builder` | CI/CD Pipeline Builder |
+| `ci-cd-pipeline-builder` | CI CD Pipeline Builder |
 | `cloud-security-architect` | Cloud Security Architect |
-| `cms-developer` | CMS Developer |
 | `code-comment-writer` | Code Comment Writer |
 | `code-reviewer` | Code Reviewer |
 | `code-translator` | Code Translator |
 | `codebase-onboarding-engineer` | Codebase Onboarding Engineer |
 | `compliance-auditor` | Compliance Auditor |
 | `composio` | Composio |
-| `cost-reducer` | Cost Reducer |
 | `create-skill` | Create Skill |
 | `cron-job-planner` | Cron Job Planner |
 | `data-engineer` | Data Engineer |
+| `data-pipeline-architect` | Data Pipeline Architect |
 | `database-optimizer` | Database Optimizer |
 | `database-schema-designer` | Database Schema Designer |
+| `debugging-strategist` | Debugging Strategist |
 | `dependency-upgrade-auditor` | Dependency Upgrade Auditor |
 | `deployment-checklist` | Deployment Checklist |
-| `devops-automator` | DevOps Automator |
-| `drupal-shopping-cart` | Drupal Shopping Cart |
+| `devops-automator` | Devops Automator |
+| `ecommerce-cms-architect` | eCommerce CMS Architect |
 | `email-intelligence-engineer` | Email Intelligence Engineer |
 | `embedded-firmware-engineer` | Embedded Firmware Engineer |
 | `environment-setup-guide` | Environment Setup Guide |
 | `error-boundary-designer` | Error Boundary Designer |
 | `evidence-collector` | Evidence Collector |
 | `feishu-integration-developer` | Feishu Integration Developer |
-| `filament-optimization-specialist` | Filament Optimization Specialist |
+| `filament-optimizer` | Filament Optimizer |
+| `finops-engineer` | FinOps Engineer |
 | `frontend-developer` | Frontend Developer |
 | `git-commit-writer` | Git Commit Writer |
-| `git-workflow-master` | Git Workflow Master |
+| `git-workflow-architect` | Git Workflow Architect |
 | `graphql-api-designer` | GraphQL API Designer |
-| `iac-provisioner` | Infrastructure-as-Code Provisioner |
-| `incident-responder` | Incident Responder |
-| `incident-response-commander` | Incident Response Commander |
+| `iac-provisioner` | IaC Provisioner |
+| `incident-commander` | Incident Commander |
 | `ios-developer` | iOS Developer |
 | `it-service-manager` | IT Service Manager |
+| `legacy-code-modernizer` | Legacy Code Modernizer |
 | `load-testing-engineer` | Load Testing Engineer |
+| `migration-engineer` | Migration Engineer |
 | `minimal-change-engineer` | Minimal Change Engineer |
 | `mobile-app-builder` | Mobile App Builder |
 | `monorepo-planner` | Monorepo Planner |
-| `multi-agent-systems-architect` | Multi-Agent Systems Architect |
-| `n8n` | n8n |
+| `multi-agent-systems-architect` | Multi Agent Systems Architect |
+| `n8n` | N8n |
 | `new-client-system` | New Client System |
-| `orgscript-engineer` | OrgScript Engineer |
+| `observability-engineer` | Observability Engineer |
+| `orgscript-engineer` | Orgscript Engineer |
 | `penetration-tester` | Penetration Tester |
 | `performance-optimizer` | Performance Optimizer |
+| `platform-engineer` | Platform Engineer |
 | `pr-description-writer` | PR Description Writer |
 | `prompt-engineer` | Prompt Engineer |
 | `rapid-prototyper` | Rapid Prototyper |
-| `readme-generator` | README Generator |
-| `reality-checker` | Reality Checker |
+| `readme-generator` | Readme Generator |
 | `refactor-assistant` | Refactor Assistant |
 | `regex-builder` | Regex Builder |
-| `scalability` | Scalability |
-| `security` | Security |
-| `security-architect` | Security Architect |
-| `security-auditor` | Security Auditor |
-| `self-healing` | Self Healing |
-| `senior-developer` | Senior Developer |
-| `senior-secops-engineer` | Senior SecOps Engineer |
+| `secops-intelligence-engineer` | Secops Intelligence Engineer |
 | `setup-codex-precheck` | Setup Codex Precheck |
 | `software-architect` | Software Architect |
 | `solidity-smart-contract-engineer` | Solidity Smart Contract Engineer |
-| `sre-site-reliability-engineer` | SRE (Site Reliability Engineer) |
+| `sre-site-reliability-engineer` | SRE Site Reliability Engineer |
 | `tech-stack-advisor` | Tech Stack Advisor |
 | `test-writer` | Test Writer |
-| `threat-detection-engineer` | Threat Detection Engineer |
-| `threat-intelligence-analyst` | Threat Intelligence Analyst |
-| `trigger-dev` | Trigger.dev |
-| `typescript-migrator` | TypeScript Migrator |
+| `trigger-dev` | Trigger Dev |
+| `typescript-migrator` | Typescript Migrator |
 | `voice-ai-integration-engineer` | Voice AI Integration Engineer |
 | `webhook-handler-builder` | Webhook Handler Builder |
-| `wechat-mini-program-developer` | WeChat Mini Program Developer |
-| `wordpress-shopping-cart` | WordPress Shopping Cart |
+| `wechat-mini-program-developer` | Wechat Mini Program Developer |
 | `workflow-optimizer` | Workflow Optimizer |
 
-### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (60 skills)
+### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (52 skills)
 
 | Skill ID | Title |
 |----------|-------|
-| `aeo-foundations` | AEO Foundations |
+| `aeo-foundations` | Aeo Foundations |
 | `affiliate-program-designer` | Affiliate Program Designer |
-| `agentic-search-optimizer` | Agentic Search Optimizer |
 | `ai-citation-strategist` | AI Citation Strategist |
 | `app-store-optimizer` | App Store Optimizer |
-| `baidu-seo-specialist` | Baidu SEO Specialist |
 | `bilibili-content-strategist` | Bilibili Content Strategist |
-| `book-co-author` | Book Co-Author |
+| `book-co-author` | Book Co Author |
 | `carousel-growth-engine` | Carousel Growth Engine |
-| `china-e-commerce-operator` | China E-Commerce Operator |
+| `china-e-commerce-operator` | China E Commerce Operator |
 | `china-market-localization-strategist` | China Market Localization Strategist |
 | `cold-email-writer` | Cold Email Writer |
 | `community-post-writer` | Community Post Writer |
 | `competitor-analyser` | Competitor Analyser |
 | `content-calendar-builder` | Content Calendar Builder |
-| `content-creator` | Content Creator |
 | `content-repurposer` | Content Repurposer |
 | `conversion-rate-optimizer` | Conversion Rate Optimizer |
-| `cross-border-e-commerce-specialist` | Cross-Border E-Commerce Specialist |
-| `douyin-strategist` | Douyin Strategist |
+| `cross-border-ecommerce-operator` | Cross Border eCommerce Operator |
 | `email-strategist` | Email Strategist |
-| `global-podcast-strategist` | Global Podcast Strategist |
-| `google-ads-copywriter` | Google Ads Copywriter |
 | `growth-hacker` | Growth Hacker |
 | `hashtag-researcher` | Hashtag Researcher |
 | `influencer-outreach-strategist` | Influencer Outreach Strategist |
 | `instagram-curator` | Instagram Curator |
 | `instantly-campaign` | Instantly Campaign |
-| `kuaishou-strategist` | Kuaishou Strategist |
 | `landing-page-copywriter` | Landing Page Copywriter |
 | `launch-week-planner` | Launch Week Planner |
-| `linkedin-content-creator` | LinkedIn Content Creator |
 | `livestream-commerce-coach` | Livestream Commerce Coach |
-| `meta-ads-copywriter` | Meta Ads Copywriter |
-| `meta-ads-copywriter` | Meta Ads Copywriter |
-| `multi-platform-publisher` | Multi-Platform Publisher |
+| `multi-platform-publisher` | Multi Platform Publisher |
 | `newsletter-writer` | Newsletter Writer |
+| `paid-media-copywriter` | Paid Media Copywriter |
 | `pinterest-strategist` | Pinterest Strategist |
 | `podcast-pitch-writer` | Podcast Pitch Writer |
 | `podcast-strategist` | Podcast Strategist |
-| `pr-and-communications-manager` | PR & Communications Manager |
+| `pr-and-communications-manager` | PR And Communications Manager |
 | `pricing-strategist` | Pricing Strategist |
 | `private-domain-operator` | Private Domain Operator |
 | `product-hunt-launcher` | Product Hunt Launcher |
 | `reddit-community-builder` | Reddit Community Builder |
+| `search-engine-optimizer` | Search Engine Optimizer |
 | `seo-article-writer` | SEO Article Writer |
-| `seo-specialist` | SEO Specialist |
-| `short-video-editing-coach` | Short-Video Editing Coach |
+| `short-video-editing-coach` | Short Video Editing Coach |
+| `social-content-creator` | Social Content Creator |
 | `social-media-strategist` | Social Media Strategist |
 | `testimonial-extractor` | Testimonial Extractor |
-| `tiktok-strategist` | TikTok Strategist |
+| `tiktok-strategist` | Tiktok Strategist |
 | `twitter-engager` | Twitter Engager |
-| `video-optimization-specialist` | Video Optimization Specialist |
+| `video-optimizer` | Video Optimizer |
+| `video-script-writer` | Video Script Writer |
 | `viral-hook-generator` | Viral Hook Generator |
-| `wechat-official-account` | WeChat Official Account |
-| `weibo-strategist` | Weibo Strategist |
-| `x-twitter-intelligence-analyst` | X/Twitter Intelligence Analyst |
-| `xiaohongshu-specialist` | Xiaohongshu Specialist |
-| `youtube-b-roll-maker` | YouTube B-Roll Maker |
-| `youtube-clipper` | YouTube Clipper |
+| `wechat-official-account` | Wechat Official Account |
+| `x-twitter-intelligence-analyst` | X Twitter Intelligence Analyst |
+| `youtube-b-roll-maker` | Youtube B Roll Maker |
+| `youtube-clipper` | Youtube Clipper |
 | `zhihu-strategist` | Zhihu Strategist |
 
-### Specialized — [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) (55 skills)
+### Specialized — [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) (41 skills)
 
 | Skill ID | Title |
 |----------|-------|
 | `accounts-payable-agent` | Accounts Payable Agent |
-| `agentic-identity-and-trust-architect` | Agentic Identity & Trust Architect |
+| `agentic-identity-and-trust-architect` | Agentic Identity And Trust Architect |
 | `agents-orchestrator` | Agents Orchestrator |
 | `automation-governance-architect` | Automation Governance Architect |
 | `business-strategist` | Business Strategist |
 | `change-management-consultant` | Change Management Consultant |
-| `chief-financial-officer` | Chief Financial Officer |
-| `chief-of-staff` | Chief of Staff |
+| `chief-of-staff` | Chief Of Staff |
 | `civil-engineer` | Civil Engineer |
 | `corporate-training-designer` | Corporate Training Designer |
 | `cultural-intelligence-strategist` | Cultural Intelligence Strategist |
-| `customer-service` | Customer Service |
 | `customer-success-manager` | Customer Success Manager |
 | `data-consolidation-agent` | Data Consolidation Agent |
 | `data-privacy-officer` | Data Privacy Officer |
 | `developer-advocate` | Developer Advocate |
 | `document-generator` | Document Generator |
 | `esg-sustainability-officer` | ESG Sustainability Officer |
-| `french-consulting-market-navigator` | French Consulting Market Navigator |
 | `government-digital-presales-consultant` | Government Digital Presales Consultant |
 | `grant-writer` | Grant Writer |
-| `healthcare-customer-service` | Healthcare Customer Service |
-| `healthcare-marketing-compliance-specialist` | Healthcare Marketing Compliance Specialist |
-| `hiring-plan-org-chart-builder` | Hiring Plan & Org Chart Builder |
-| `hospitality-guest-services` | Hospitality Guest Services |
-| `hr-onboarding` | HR Onboarding |
+| `healthcare-compliance-auditor` | Healthcare Compliance Auditor |
+| `hiring-plan-org-chart-builder` | Hiring Plan Org Chart Builder |
+| `hr-onboarding` | Hr Onboarding |
 | `identity-graph-operator` | Identity Graph Operator |
-| `korean-business-navigator` | Korean Business Navigator |
 | `language-translator` | Language Translator |
-| `legal-billing-and-time-tracking` | Legal Billing & Time Tracking |
-| `legal-client-intake` | Legal Client Intake |
-| `legal-document-review` | Legal Document Review |
+| `legal-practice-assistant` | Legal Practice Assistant |
 | `loan-officer-assistant` | Loan Officer Assistant |
-| `lsp-index-engineer` | LSP Index Engineer |
-| `m-and-a-integration-manager` | M&A Integration Manager |
+| `lsp-index-engineer` | Lsp Index Engineer |
+| `m-and-a-integration-manager` | M And A Integration Manager |
 | `mcp-builder` | MCP Builder |
-| `medical-billing-coding-specialist` | Medical Billing Coding Specialist |
-| `model-qa-specialist` | Model QA Specialist |
+| `medical-billing-coder` | Medical Billing Coder |
+| `model-qa-evaluator` | Model QA Evaluator |
 | `operations-manager` | Operations Manager |
 | `organizational-psychologist` | Organizational Psychologist |
-| `personal-growth-mentor` | Personal Growth Mentor |
 | `pricing-analyst` | Pricing Analyst |
-| `real-estate-buyer-and-seller` | Real Estate Buyer & Seller |
-| `recruitment-specialist` | Recruitment Specialist |
+| `real-estate-advisor` | Real Estate Advisor |
 | `regulatory-compliance-officer` | Regulatory Compliance Officer |
 | `report-distribution-agent` | Report Distribution Agent |
-| `retail-customer-returns` | Retail Customer Returns |
-| `sales-data-extraction-agent` | Sales Data Extraction Agent |
-| `sales-outreach` | Sales Outreach |
 | `salesforce-architect` | Salesforce Architect |
-| `strategy-duel-agent` | Strategy Duel Agent |
-| `study-abroad-advisor` | Study Abroad Advisor |
 | `supply-chain-strategist` | Supply Chain Strategist |
+| `talent-acquisition-manager` | Talent Acquisition Manager |
 | `workflow-architect` | Workflow Architect |
 | `zk-steward` | ZK Steward |
 
@@ -294,7 +269,7 @@ skill-id/
 
 | Skill ID | Title |
 |----------|-------|
-| `a-b-test-designer` | A/B Test Designer |
+| `a-b-test-designer` | A B Test Designer |
 | `animation-planner` | Animation Planner |
 | `brand-guardian` | Brand Guardian |
 | `build-premium-website` | Build Premium Website |
@@ -302,16 +277,16 @@ skill-id/
 | `component-namer` | Component Namer |
 | `dark-mode-adapter` | Dark Mode Adapter |
 | `design-critique` | Design Critique |
-| `figma-to-copy` | Figma to Copy |
+| `figma-to-copy` | Figma To Copy |
 | `frontend-design` | Frontend Design |
 | `heatmap-interpreter` | Heatmap Interpreter |
 | `icon-brief-writer` | Icon Brief Writer |
 | `image-prompt-engineer` | Image Prompt Engineer |
-| `inclusive-visuals-specialist` | Inclusive Visuals Specialist |
-| `logo-brand-mark-designer` | Logo & Brand Mark Designer |
+| `inclusive-visuals-designer` | Inclusive Visuals Designer |
+| `logo-brand-mark-designer` | Logo Brand Mark Designer |
 | `motion-graphics-producer` | Motion Graphics Producer |
 | `onboarding-flow-designer` | Onboarding Flow Designer |
-| `print-packaging-designer` | Print & Packaging Designer |
+| `print-packaging-designer` | Print Packaging Designer |
 | `responsive-breakpoint-advisor` | Responsive Breakpoint Advisor |
 | `typography-system-builder` | Typography System Builder |
 | `ui-designer` | UI Designer |
@@ -321,33 +296,33 @@ skill-id/
 | `ux-researcher` | UX Researcher |
 | `visual-storyteller` | Visual Storyteller |
 | `whimsy-injector` | Whimsy Injector |
-| `youtube-popup-graphic` | YouTube Popup Graphic |
-| `youtube-thumbnail-maker` | YouTube Thumbnail Maker |
+| `youtube-popup-graphic` | Youtube Popup Graphic |
+| `youtube-thumbnail-maker` | Youtube Thumbnail Maker |
 
 ### Business — [skills-business](https://github.com/prvthmpcypher/skills-business) (29 skills)
 
 | Skill ID | Title |
 |----------|-------|
+| `ai-governance-architect` | AI Governance Architect |
 | `board-deck-builder` | Board Deck Builder |
 | `business-plan-outliner` | Business Plan Outliner |
+| `change-management-leader` | Change Management Leader |
 | `client-proposal-writer` | Client Proposal Writer |
 | `contract-clause-explainer` | Contract Clause Explainer |
-| `customer-support` | Customer Support |
 | `decision-framework` | Decision Framework |
 | `experiment-tracker` | Experiment Tracker |
 | `feedback-giver` | Feedback Giver |
 | `investor-pitch-deck-writer` | Investor Pitch Deck Writer |
-| `invoice-and-payment-writer` | Invoice & Payment Writer |
 | `jira-workflow-steward` | Jira Workflow Steward |
 | `job-description-writer` | Job Description Writer |
 | `meeting-summariser` | Meeting Summariser |
-| `negotiation-coach` | Negotiation Coach |
+| `negotiation-strategist` | Negotiation Strategist |
 | `notion-database-architect` | Notion Database Architect |
 | `okr-designer` | OKR Designer |
 | `product-manager` | Product Manager |
 | `productivity-audit` | Productivity Audit |
+| `project-manager` | Project Manager |
 | `project-shepherd` | Project Shepherd |
-| `senior-project-manager` | Senior Project Manager |
 | `sop-writer` | SOP Writer |
 | `sprint-prioritizer` | Sprint Prioritizer |
 | `studio-operations` | Studio Operations |
@@ -355,14 +330,14 @@ skill-id/
 | `trend-researcher` | Trend Researcher |
 | `upwork` | Upwork |
 | `upwork-proposal` | Upwork Proposal |
-| `vendor-procurement-manager` | Vendor & Procurement Manager |
-| `weekly-review-system` | Weekly Review System |
+| `vendor-procurement-manager` | Vendor Procurement Manager |
+| `workflow-redesign-consultant` | Workflow Redesign Consultant |
 
 ### Game Dev — [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) (22 skills)
 
 | Skill ID | Title |
 |----------|-------|
-| `blender-add-on-engineer` | Blender Add-on Engineer |
+| `blender-add-on-engineer` | Blender Add On Engineer |
 | `game-audio-engineer` | Game Audio Engineer |
 | `game-designer` | Game Designer |
 | `game-monetization-designer` | Game Monetization Designer |
@@ -385,12 +360,32 @@ skill-id/
 | `unreal-technical-artist` | Unreal Technical Artist |
 | `unreal-world-builder` | Unreal World Builder |
 
-### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (14 skills)
-### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (14 skills)
+### Sales & Support — [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) (17 skills)
 
 | Skill ID | Title |
 |----------|-------|
-| `citation-formatter` | Citation Formatter |
+| `account-strategist` | Account Strategist |
+| `analytics-reporter` | Analytics Reporter |
+| `churn-analyst` | Churn Analyst |
+| `cross-channel-support-agent` | Cross Channel Support Agent |
+| `customer-support` | Customer Support |
+| `discovery-coach` | Discovery Coach |
+| `executive-summary-generator` | Executive Summary Generator |
+| `finance-tracker` | Finance Tracker |
+| `legal-compliance-checker` | Legal Compliance Checker |
+| `outbound-strategist` | Outbound Strategist |
+| `pipeline-analyst` | Pipeline Analyst |
+| `proposal-strategist` | Proposal Strategist |
+| `renewal-strategist` | Renewal Strategist |
+| `sales-coach` | Sales Coach |
+| `sales-data-extraction-agent` | Sales Data Extraction Agent |
+| `sales-engineer` | Sales Engineer |
+| `sales-outreach` | Sales Outreach |
+
+### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (15 skills)
+
+| Skill ID | Title |
+|----------|-------|
 | `citation-formatter` | Citation Formatter |
 | `concept-explainer` | Concept Explainer |
 | `essay-structurer` | Essay Structurer |
@@ -404,78 +399,55 @@ skill-id/
 | `research-paper-summariser` | Research Paper Summariser |
 | `researcher` | Researcher |
 | `skill-roadmap-builder` | Skill Roadmap Builder |
+| `study-abroad-advisor` | Study Abroad Advisor |
 | `study-plan-builder` | Study Plan Builder |
 
-### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (11 skills)
-### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (11 skills)
+### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (12 skills)
 
 | Skill ID | Title |
 |----------|-------|
-| `financial-plan-starter` | Financial Plan Starter |
-| `fitness-nutrition-planner` | Fitness & Nutrition Planner |
-| `fitness-nutrition-planner` | Fitness & Nutrition Planner |
-| `habit-tracker-designer` | Habit Tracker Designer |
-| `know-me` | Know Me |
-| `linkedin-profile-optimizer` | LinkedIn Profile Optimizer |
-| `relationship-crm-builder` | Relationship CRM Builder |
-| `resume-optimizer` | Resume Optimizer |
-| `salary-negotiation-coach` | Salary Negotiation Coach |
-| `second-brain-architect` | Second Brain Architect |
-| `travel-planner` | Travel Planner |
-| `year-review-system` | Year Review System |
-
-### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (10 skills)
-### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (10 skills)
-
-| Skill ID | Title |
-|----------|-------|
-| `bio-writer` | Bio Writer |
-| `book-outline-builder` | Book Outline Builder |
-| `case-study-writer` | Case Study Writer |
-| `ebook-chapter-writer` | Ebook Chapter Writer |
-| `ghostwriter` | Ghostwriter |
-| `press-release-writer` | Press Release Writer |
-| `screenplay-writer` | Screenplay Writer |
-| `screenplay-writer` | Screenplay Writer |
-| `story-hook-writer` | Story Hook Writer |
-| `technical-writer` | Technical Writer |
-| `thread-to-blog-converter` | Thread to Blog Converter |
-
-### Sales & Support — [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) (13 skills)
-
-| Skill ID | Title |
-|----------|-------|
-| `account-strategist` | Account Strategist |
-| `analytics-reporter` | Analytics Reporter |
-| `churn-analyst` | Churn Analyst |
-| `discovery-coach` | Discovery Coach |
-| `executive-summary-generator` | Executive Summary Generator |
-| `finance-tracker` | Finance Tracker |
-| `legal-compliance-checker` | Legal Compliance Checker |
-| `outbound-strategist` | Outbound Strategist |
-| `pipeline-analyst` | Pipeline Analyst |
-| `proposal-strategist` | Proposal Strategist |
-| `renewal-strategist` | Renewal Strategist |
-| `sales-coach` | Sales Coach |
-| `sales-engineer` | Sales Engineer |
-
-### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (9 skills)
-
-| Skill ID | Title |
-|----------|-------|
-| `bookkeeper-and-controller` | Bookkeeper & Controller |
-| `budget-expense-auditor` | Budget & Expense Auditor |
-| `cap-table-fundraising-modeler` | Cap Table & Fundraising Modeler |
-| `crypto-tax-specialist` | Crypto Tax Specialist |
+| `bookkeeper-and-controller` | Bookkeeper And Controller |
+| `budget-expense-auditor` | Budget Expense Auditor |
+| `cap-table-fundraising-modeler` | Cap Table Fundraising Modeler |
+| `chief-financial-officer` | Chief Financial Officer |
+| `crypto-tax-advisor` | Crypto Tax Advisor |
 | `financial-analyst` | Financial Analyst |
-| `fp-and-a-analyst` | FP&A Analyst |
-| `insurance-actuary-analyst` | Insurance & Actuarial Analyst |
+| `financial-plan-starter` | Financial Plan Starter |
+| `fp-and-a-analyst` | Fp And A Analyst |
+| `insurance-actuary-analyst` | Insurance Actuary Analyst |
 | `investment-researcher` | Investment Researcher |
+| `invoice-and-payment-writer` | Invoice And Payment Writer |
 | `tax-strategist` | Tax Strategist |
 
----
+### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (10 skills)
 
-## Author
+| Skill ID | Title |
+|----------|-------|
+| `fitness-nutrition-planner` | Fitness Nutrition Planner |
+| `habit-tracker-designer` | Habit Tracker Designer |
+| `know-me` | Know Me |
+| `knowledge-management-architect` | Knowledge Management Architect |
+| `linkedin-profile-optimizer` | Linkedin Profile Optimizer |
+| `periodic-review-system` | Periodic Review System |
+| `relationship-crm-builder` | Relationship CRM Builder |
+| `resume-optimizer` | Resume Optimizer |
+| `second-brain-architect` | Second Brain Architect |
+| `travel-planner` | Travel Planner |
 
-Copyright (c) 2026 Poorvith M P · MIT License
-Follow the build: [@poorvith_mp](https://x.com/poorvith_mp)
+### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (5 skills)
+
+| Skill ID | Title |
+|----------|-------|
+| `longform-book-author` | Longform Book Author |
+| `marketing-copywriter` | Marketing Copywriter |
+| `screenplay-writer` | Screenplay Writer |
+| `technical-writer` | Technical Writer |
+| `thread-to-blog-converter` | Thread To Blog Converter |
+
+### Meta — [skills-meta](https://github.com/prvthmpcypher/skills-meta) (3 skills)
+
+| Skill ID | Title |
+|----------|-------|
+| `prompt-library-curator` | Prompt Library Curator |
+| `skill-linter` | Skill Linter |
+| `skill-router` | Skill Router |
