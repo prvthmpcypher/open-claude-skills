@@ -82,31 +82,31 @@ skill-id/
 └── assets/        # Optional: Schemas, templates, fixtures
 ```
 
-`references/`, `scripts/` and `assets/` are part of the spec but are not yet used across this library — see the status note below.
+`scripts/` and `assets/` are part of the spec but are not yet used across this library.
 
-## Status — known issues (v0.9)
+## Quality
 
-A full file-level audit of all 315 skills in August 2026 found defects that a previous release note described as already fixed. They are being worked through now; this section will be removed when they are closed.
+A file-level audit of all 315 skills in August 2026 found that the release labelled "v2.0 — production-grade" was not accurate. Everything it found has since been fixed:
 
-- **30 skills are import stubs.** Their body contains a fetch-failure placeholder instead of instructions. Do not install these yet:
+| Defect | Was | Now |
+|---|---:|---:|
+| Skills shipped as import-failure stubs | 30 | 0 |
+| Wrong-domain QA checklists (finance skills verifying that code compiles) | 281 | 0 |
+| Descriptions over the ~250-char listing limit, trigger clause cut off | 228 | 0 |
+| Descriptions ending in generated boilerplate | 180 | 0 |
+| Triggers that just restate the skill's own name | 148 | 0 |
+| No trigger clause in the visible part of the description | 60 | 0 |
+| Reference files the body never links, so they can never load | 13 | 0 |
 
-  <details>
-  <summary>The 30 stub skills</summary>
+Enforced by `scripts/validate.py`, which reports zero findings across all 315 skills. Run it yourself:
 
-  **skills-developer:** `autonomous-optimization-architect`, `blockchain-security-auditor`, `cloud-security-architect`, `database-optimizer`, `filament-optimizer`, `git-workflow-architect`, `it-service-manager`, `minimal-change-engineer`, `multi-agent-systems-architect`, `orgscript-engineer`, `rapid-prototyper`
+```bash
+python scripts/validate.py
+```
 
-  **skills-marketing:** `aeo-foundations`, `email-strategist`, `livestream-commerce-coach`, `multi-platform-publisher`, `wechat-official-account`
+Skills that overlap each other now name their sibling in the description (`financial-analyst` says "Not for budget-vs-actual variance work — use `fp-and-a-analyst`"), so routing between similar skills is deliberate rather than arbitrary. `scripts/overlap.py --regress` enforces that.
 
-  **skills-specialized:** `change-management-consultant`, `chief-of-staff`, `customer-success-manager`, `data-privacy-officer`, `esg-sustainability-officer`, `language-translator`, `loan-officer-assistant`, `lsp-index-engineer`, `m-and-a-integration-manager`, `medical-billing-coder`, `operations-manager`, `organizational-psychologist`, `pricing-analyst`, `report-distribution-agent`
-
-  </details>
-
-- **281 skills carry a software-engineering QA checklist regardless of domain**, including every finance and education skill.
-- **228 skill descriptions exceed the ~250-character listing limit**, and the trigger clause sits at the end — so it is cut off. Affected skills will under-trigger.
-- **`skill-router`'s index is stale** (references 37 skills that no longer exist, missing 210 that do). Don't rely on it until it is regenerated.
-- **No `scripts/` or `assets/` exist** in any skill, despite the conventions block above describing them.
-
-Tracking: the remediation plan covers content repair, per-category verification checklists, description rewrites, plugin packaging and CI validation.
+Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instructions rather than executable capability.
 
 ---
 
