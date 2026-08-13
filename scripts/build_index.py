@@ -32,9 +32,6 @@ from skillary import iter_skills, repo_root  # noqa: E402
 # table of contents while the 315-row index belongs at the bottom. Generating
 # one contiguous block would force them together and make the README worse to
 # read for the sake of the generator.
-# Generated files are written LF. `.gitattributes` sets `* text=auto eol=lf`
-# across all 13 repos, so emitting CRLF here would put the generator in a
-# permanent fight with git.
 REGIONS = {
     "REPOS": ("<!-- BEGIN:REPOS -->", "<!-- END:REPOS -->"),
     "INDEX": ("<!-- BEGIN:INDEX -->", "<!-- END:INDEX -->"),
@@ -132,6 +129,13 @@ def render_router(grouped: dict[str, list]) -> str:
     return "\n".join(out)
 
 
+# Generated files are written with the platform's native line ending, which is
+# what git checks out under `* text=auto`. Pinning either LF or CRLF here leaves
+# the file permanently reading as modified on the other platform.
+def write_native(path: Path, content: str) -> None:
+    path.write_text(content, encoding="utf-8")
+
+
 def splice(text: str, region: str, block: str) -> str:
     begin, end = REGIONS[region]
     start, stop = text.find(begin), text.find(end)
@@ -163,14 +167,14 @@ def main() -> int:
         target = repo_root() / "skills-meta" / "skills" / "skill-router" / "references" / "skill-index.md"
         content = render_router(grouped)
         if args.write:
-            target.write_text(content, encoding="utf-8", newline="\n")
+            write_native(target, content)
             print(f"wrote {target} ({total} skills)")
         elif args.check and target.read_text(encoding="utf-8").replace("\r\n", "\n") != content:
             print(f"DRIFT: {target} is stale")
             return 1
 
     if args.write:
-        readme.write_text(updated, encoding="utf-8", newline="\n")
+        write_native(readme, updated)
         print(f"wrote index: {total} skills across {len(grouped)} repos")
         return 0
 
