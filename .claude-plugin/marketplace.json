@@ -1,0 +1,121 @@
+{
+  "name": "skillary",
+  "owner": {
+    "name": "Poorvith M P",
+    "url": "https://github.com/prvthmpcypher"
+  },
+  "metadata": {
+    "description": "315 Agent Skills across 12 domains, every one validated for trigger precision.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "skills-developer",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-developer"
+      },
+      "description": "80 skills. Software engineering: architecture, security, CI/CD, data, mobile, SRE and debugging.",
+      "category": "developer"
+    },
+    {
+      "name": "skills-marketing",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-marketing"
+      },
+      "description": "52 skills. Campaigns, SEO and AEO, social, paid media, lifecycle email and content.",
+      "category": "marketing"
+    },
+    {
+      "name": "skills-specialized",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-specialized"
+      },
+      "description": "41 skills. Compliance, legal, healthcare, HR, agent infrastructure and industry operations.",
+      "category": "specialized"
+    },
+    {
+      "name": "skills-design",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-design"
+      },
+      "description": "29 skills. Visual and product design: design systems, UX, brand, typography and accessibility.",
+      "category": "design"
+    },
+    {
+      "name": "skills-business",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-business"
+      },
+      "description": "29 skills. Operations, strategy, product management, governance and freelancing.",
+      "category": "business"
+    },
+    {
+      "name": "skills-gamedev",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-gamedev"
+      },
+      "description": "22 skills. Game development across Unity, Unreal, Godot and Roblox, plus art and audio pipelines.",
+      "category": "game-dev"
+    },
+    {
+      "name": "skills-sales-support",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-sales-support"
+      },
+      "description": "17 skills. Sales execution, pre-sales, customer support, retention and revenue analysis.",
+      "category": "sales-support"
+    },
+    {
+      "name": "skills-education",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-education"
+      },
+      "description": "15 skills. Teaching, learning design, study systems, research and academic writing.",
+      "category": "education"
+    },
+    {
+      "name": "skills-finance",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-finance"
+      },
+      "description": "12 skills. FP&A, treasury, tax, cap tables, investment research and bookkeeping.",
+      "category": "finance"
+    },
+    {
+      "name": "skills-personal",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-personal"
+      },
+      "description": "10 skills. Personal productivity, knowledge management, career and life planning.",
+      "category": "personal"
+    },
+    {
+      "name": "skills-writing",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-writing"
+      },
+      "description": "5 skills. Long-form and professional writing: books, technical docs, screenplays and copy.",
+      "category": "writing"
+    },
+    {
+      "name": "skills-meta",
+      "source": {
+        "source": "github",
+        "repo": "prvthmpcypher/skills-meta"
+      },
+      "description": "3 skills. Skills that operate on the skill library itself: routing, linting and curation.",
+      "category": "meta"
+    }
+  ]
+}

@@ -1,13 +1,13 @@
-# open-claude-skills
+# skillary
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v0.9 (remediation in progress)**
+- Version: **v1.0.0**
 - Last updated: **August 2026**
 - License: **MIT**
 - Total skills (all category repos): **315**
 
-> **How to use this repo:** Browse the index below to find the skill you need, then go to that category repo and download only what you want. No bloat.
+Each category is its own repo and its own installable plugin, so you take only the domains you want.
 
 ---
 
@@ -45,28 +45,46 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 ## Install
 
-This repo is an index only — it contains no skills. Every install starts by cloning the **category repo** that holds the skill you want (find it in the table above).
+This repo is an index and a plugin marketplace. It contains no skills itself — each category lives in its own repo.
+
+### Claude Code
 
 ```bash
-git clone https://github.com/prvthmpcypher/skills-<category>.git
-cd skills-<category>
+/plugin marketplace add prvthmpcypher/skillary
+/plugin install skills-finance@skillary
 ```
 
-Then copy the one skill folder into your agent's skills directory:
+### Codex, Cursor, Gemini CLI and 70+ other agents
+
+`npx skills` reads the manifests in these repos, so no custom installer is needed:
+
+```bash
+npx skills add prvthmpcypher/skills-finance
+npx skills add prvthmpcypher/skills-finance/fp-and-a-analyst   # one skill
+npx skills add prvthmpcypher/skills-finance -g                 # user-global
+```
+
+### Manual
+
+Clone the **category** repo, not this one, then copy the folder you want:
+
+```bash
+git clone https://github.com/prvthmpcypher/skills-finance
+cp -R skills-finance/skills/fp-and-a-analyst ~/.claude/skills/
+```
 
 | Agent | Personal | Project |
 |-------|----------|---------|
 | Claude Code | `~/.claude/skills/` | `.claude/skills/` |
 | Codex CLI | `~/.codex/skills/` | `.codex/skills/` |
-| Gemini CLI / Antigravity | `~/.gemini/skills/` | `.agents/skills/` |
+| Gemini CLI | `~/.gemini/skills/` | `.agents/skills/` |
 | Cursor | `~/.cursor/skills/` | `.agents/skills/` |
+| VS Code / Copilot | `~/.copilot/skills/` | `.github/skills/` |
 
-```bash
-cp -R skills/<skill-id> ~/.claude/skills/<skill-id>
-```
+`.agents/skills/` is the emerging vendor-neutral path that several agents read.
 
 ### Claude.ai
-Zip a single `skills/<skill-id>` folder and upload via **Settings → Capabilities → Skills**.
+Every skill ships a `<skill-id>.skill` bundle. Upload it via **Settings → Capabilities → Skills**.
 
 ---
 

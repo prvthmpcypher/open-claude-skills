@@ -1,4 +1,4 @@
-# Contributing to open-claude-skills
+# Contributing to skillary
 
 This hub only indexes category repositories. Add or edit skills in the matching `skills-*` repo — not here.
 

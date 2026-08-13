@@ -2,6 +2,17 @@
 
 Versioning note: earlier releases used two conflicting schemes (`v0.1`/`v0.2`/`v0.3` in changelogs and commits, `v2.0` in the README). Everything published so far is treated as pre-1.0. The current state is **v0.9**; the library will move to semver `v1.0.0` when remediation and plugin packaging are complete.
 
+## v1.0.0 — August 2026
+
+First release where the quality claim is true, and the first that is installable.
+
+- **All 315 skills remediated.** 30 import stubs authored, 281 wrong-domain QA checklists replaced with domain-appropriate ones from `taxonomy/checklists.yaml`, all 315 descriptions rewritten to fit inside the ~250-character listing limit with the trigger clause visible, 13 unreachable reference files linked, 11 missing titles added. `scripts/validate.py` reports zero findings.
+- **Overlapping skills now name each other.** `financial-analyst` points at `fp-and-a-analyst` and vice versa, so routing between similar skills is deliberate. Enforced by `scripts/overlap.py --regress`.
+- **Installable as a plugin marketplace.** `.claude-plugin/marketplace.json` here lists all 12 category repos as separate plugins, each with its own `plugin.json`. `npx skills` reads the same manifests, so Codex, Cursor, Gemini CLI and 70+ other agents work without a custom installer.
+- **Hub renamed** from `open-claude-skills` to `skillary`.
+- **Generated, not hand-maintained**: the README index, `skill-router`'s reference index, all 13 manifests and all 315 `.skill` bundles are built by scripts in `scripts/`.
+- Version scheme reset. Everything before this was pre-1.0 regardless of what it was labelled.
+
 ## v0.9 — August 2026
 
 Corrections to the release previously labelled "v2.0: Full audit modernization — 315 production-grade skills". A file-level audit of all 315 `SKILL.md` files found that label was not accurate.
