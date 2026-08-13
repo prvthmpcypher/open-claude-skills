@@ -24,7 +24,7 @@ from build_index import LABELS, OWNER, collect  # noqa: E402
 from skillary import repo_root  # noqa: E402
 
 MARKETPLACE = "skillary"
-VERSION = "1.0.0"
+VERSION = "2.1.0"
 AUTHOR = {"name": "Poorvith M P", "url": f"https://github.com/{OWNER}"}
 
 # What each category is for, in the words someone browsing a marketplace needs.

@@ -2,7 +2,7 @@
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v1.0.0**
+- Version: **v2.1.0**
 - Last updated: **August 2026**
 - License: **MIT**
 - Total skills (all category repos): **315**

@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "315 Agent Skills across 12 domains, every one validated for trigger precision.",
-    "version": "1.0.0"
+    "version": "2.1.0"
   },
   "plugins": [
     {

@@ -1,29 +1,34 @@
 # Changelog
 
-Versioning note: earlier releases used two conflicting schemes (`v0.1`/`v0.2`/`v0.3` in changelogs and commits, `v2.0` in the README). Everything published so far is treated as pre-1.0. The current state is **v0.9**; the library will move to semver `v1.0.0` when remediation and plugin packaging are complete.
+Versioning note: earlier releases used two conflicting schemes (`v0.1`/`v0.2`/`v0.3` in changelogs and commits, `v2.0` in the README and on GitHub Releases). From v2.1.0 onward there is one scheme: semver, continuing from the published v2.0.
 
-## v1.0.0 — August 2026
+## v2.1.0 — August 2026
 
-First release where the quality claim is true, and the first that is installable.
+The release where the quality claim is actually true, and the first one you can install.
 
-- **All 315 skills remediated.** 30 import stubs authored, 281 wrong-domain QA checklists replaced with domain-appropriate ones from `taxonomy/checklists.yaml`, all 315 descriptions rewritten to fit inside the ~250-character listing limit with the trigger clause visible, 13 unreachable reference files linked, 11 missing titles added. `scripts/validate.py` reports zero findings.
-- **Overlapping skills now name each other.** `financial-analyst` points at `fp-and-a-analyst` and vice versa, so routing between similar skills is deliberate. Enforced by `scripts/overlap.py --regress`.
-- **Installable as a plugin marketplace.** `.claude-plugin/marketplace.json` here lists all 12 category repos as separate plugins, each with its own `plugin.json`. `npx skills` reads the same manifests, so Codex, Cursor, Gemini CLI and 70+ other agents work without a custom installer.
-- **Hub renamed** from `open-claude-skills` to `skillary`.
-- **Generated, not hand-maintained**: the README index, `skill-router`'s reference index, all 13 manifests and all 315 `.skill` bundles are built by scripts in `scripts/`.
-- Version scheme reset. Everything before this was pre-1.0 regardless of what it was labelled.
+v2.0 was published as "315 production-grade skills". A file-level audit of every `SKILL.md` found that was not accurate. This fixes all of it.
 
-## v0.9 — August 2026
+**Content**
 
-Corrections to the release previously labelled "v2.0: Full audit modernization — 315 production-grade skills". A file-level audit of all 315 `SKILL.md` files found that label was not accurate.
+- **30 skills were import stubs.** Their body contained `Full .md body could not be fetched` instead of instructions. All 30 now have real content: an approach, an ordered process, and the deliverables they produce.
+- **281 skills carried a software-engineering QA checklist regardless of domain.** Every finance and education skill was instructed to verify that its code compiles. Replaced with domain-appropriate checklists from `taxonomy/checklists.yaml`, seeded from the 32 hand-written ones already in the library. Those 32, plus 35 hand-written anti-pattern sections, were left untouched.
+- **All 315 descriptions rewritten.** 228 exceeded the ~250-character listing limit with the trigger clause at the end, where it gets truncated — which is the mechanical reason skills under-fire. 180 ended in generated boilerplate that triggered on the skill's own name. Now: capability first, concrete triggers second, all inside the limit.
+- **Overlapping skills name each other.** `financial-analyst` says "Not for budget-vs-actual variance work — use `fp-and-a-analyst`", and vice versa. Without that, whichever fires first is arbitrary.
+- 13 reference files were never linked from their body, so they could never load. 11 skills had no title. Both fixed.
 
-- The README no longer claims v2.0 quality standards that were never enforced. It now carries a **Status — known issues** section listing the real state.
-- Removed `AUDIT.md`. It was a pre-remediation snapshot committed as if current: it reported 303 skills against the README's 315, flagged 23 skills that no longer exist, listed 12 of its 14 "missing" gap skills as absent when they had already been built, and included a "13 Hardcoded Paths / Secret Patterns" table that re-checking showed to be a false positive (the one flagged path, `/home/node/.n8n`, is a legitimate Docker volume). No credentials, tokens or personal paths exist in any of the 315 files.
-- Fixed the install instructions. They previously read `cp -R skills/<skill-id> …` from a repo that has no `skills/` directory, so they failed verbatim for anyone who cloned the hub. They now start from the category repo and cover Claude Code, Codex CLI, Gemini CLI and Cursor paths.
-- Added `skills-meta` to the `CONTRIBUTING.md` repo table (it listed 11 of 12 repos).
-- Added `.gitattributes` across the hub and all 12 category repos. All 315 files were CRLF with no normalisation, so any non-Windows contributor produced whole-file diffs.
+**Distribution**
 
-Still open, tracked for v1.0.0: 30 import-stub skills, 281 wrong-domain QA checklists, 228 over-length descriptions, `skill-router`'s stale index, `skill-linter`'s unmet `NOTE.md` convention, plugin manifests, and CI validation. One skill from the old gap analysis remains unbuilt: `cost-finops-engineer`.
+- **Installable as a plugin marketplace.** `.claude-plugin/marketplace.json` lists all 12 category repos as separate plugins, each with its own `plugin.json`, so you install only the domains you want.
+- **`npx skills` reads the same manifests**, so Codex, Cursor, Gemini CLI and 70+ other agents work with no custom installer.
+- **Hub renamed** `open-claude-skills` → `skillary`. GitHub redirects the old URL.
+
+**Maintenance**
+
+- The README index, `skill-router`'s reference index, all 13 manifests and all 315 `.skill` bundles are generated by scripts in `scripts/`, not hand-maintained. The index had drifted before.
+- `scripts/validate.py` enforces every rule above and reports zero findings across all 315 skills. CI runs it on every push, plus drift checks for the index, manifests and bundles.
+- `skill-router` pointed at 37 skills that no longer existed and missed 210 that did. `skill-linter` required `NOTE.md` files that zero skills have ever had. Both corrected.
+
+Still open: no skill ships `scripts/` or `assets/` yet, so all 315 are instructions rather than executable capability.
 
 ## v0.2 — July 2026
 
