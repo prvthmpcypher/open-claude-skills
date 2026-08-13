@@ -2,7 +2,7 @@
 
 This hub only indexes category repositories. Add or edit skills in the matching `skills-*` repo — not here.
 
-Maintainer: **Poorvith M P** · v0.2 · July 2026
+Maintainer: **Poorvith M P** · v0.9 · August 2026
 
 See each category repo's `CONTRIBUTING.md` for skill-creator rules.
 
@@ -27,3 +27,4 @@ See each category repo's `CONTRIBUTING.md` for skill-creator rules.
 | skills-writing | https://github.com/prvthmpcypher/skills-writing |
 | skills-sales-support | https://github.com/prvthmpcypher/skills-sales-support |
 | skills-finance | https://github.com/prvthmpcypher/skills-finance |
+| skills-meta | https://github.com/prvthmpcypher/skills-meta |

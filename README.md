@@ -2,7 +2,7 @@
 
 Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
 
-- Version: **v2.0 (Audited & Modernized)**
+- Version: **v0.9 (remediation in progress)**
 - Last updated: **August 2026**
 - License: **MIT**
 - Total skills (all category repos): **315**
@@ -12,6 +12,8 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 ---
 
 ## Category repositories
+
+<!-- BEGIN:REPOS -->
 
 | Category | Repository | Skills |
 |----------|------------|--------|
@@ -28,6 +30,10 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 | Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 5 |
 | Meta | [skills-meta](https://github.com/prvthmpcypher/skills-meta) | 3 |
 
+**Total: 315 skills across 12 repositories.**
+
+<!-- END:REPOS -->
+
 ## Meta
 
 `skills-meta` holds skills that operate on the library itself rather than a domain:
@@ -39,14 +45,24 @@ Central index for the Claude skills multi-repo library by [@prvthmpcypher](https
 
 ## Install
 
-### Claude Code
+This repo is an index only — it contains no skills. Every install starts by cloning the **category repo** that holds the skill you want (find it in the table above).
+
 ```bash
-cp -R skills/<skill-id> ~/.claude/skills/<skill-id>
+git clone https://github.com/prvthmpcypher/skills-<category>.git
+cd skills-<category>
 ```
 
-### Antigravity IDE (Google Gemini)
+Then copy the one skill folder into your agent's skills directory:
+
+| Agent | Personal | Project |
+|-------|----------|---------|
+| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
+| Codex CLI | `~/.codex/skills/` | `.codex/skills/` |
+| Gemini CLI / Antigravity | `~/.gemini/skills/` | `.agents/skills/` |
+| Cursor | `~/.cursor/skills/` | `.agents/skills/` |
+
 ```bash
-cp -R skills/<skill-id> .agents/skills/<skill-id>
+cp -R skills/<skill-id> ~/.claude/skills/<skill-id>
 ```
 
 ### Claude.ai
@@ -66,16 +82,37 @@ skill-id/
 └── assets/        # Optional: Schemas, templates, fixtures
 ```
 
-**Quality standards enforced in v2.0:**
-- Trigger-rich `description` frontmatter with explicit invocation conditions
-- Progressive disclosure: core instructions in `SKILL.md` (<500 lines)
-- Built-in `## Verification & Quality Checklist` for every skill
-- Built-in `## Anti-Patterns & Constraints` negative boundaries
-- Zero third-party credits, personal paths, or empty placeholder boilerplate
+`references/`, `scripts/` and `assets/` are part of the spec but are not yet used across this library — see the status note below.
+
+## Status — known issues (v0.9)
+
+A full file-level audit of all 315 skills in August 2026 found defects that a previous release note described as already fixed. They are being worked through now; this section will be removed when they are closed.
+
+- **30 skills are import stubs.** Their body contains a fetch-failure placeholder instead of instructions. Do not install these yet:
+
+  <details>
+  <summary>The 30 stub skills</summary>
+
+  **skills-developer:** `autonomous-optimization-architect`, `blockchain-security-auditor`, `cloud-security-architect`, `database-optimizer`, `filament-optimizer`, `git-workflow-architect`, `it-service-manager`, `minimal-change-engineer`, `multi-agent-systems-architect`, `orgscript-engineer`, `rapid-prototyper`
+
+  **skills-marketing:** `aeo-foundations`, `email-strategist`, `livestream-commerce-coach`, `multi-platform-publisher`, `wechat-official-account`
+
+  **skills-specialized:** `change-management-consultant`, `chief-of-staff`, `customer-success-manager`, `data-privacy-officer`, `esg-sustainability-officer`, `language-translator`, `loan-officer-assistant`, `lsp-index-engineer`, `m-and-a-integration-manager`, `medical-billing-coder`, `operations-manager`, `organizational-psychologist`, `pricing-analyst`, `report-distribution-agent`
+
+  </details>
+
+- **281 skills carry a software-engineering QA checklist regardless of domain**, including every finance and education skill.
+- **228 skill descriptions exceed the ~250-character listing limit**, and the trigger clause sits at the end — so it is cut off. Affected skills will under-trigger.
+- **`skill-router`'s index is stale** (references 37 skills that no longer exist, missing 210 that do). Don't rely on it until it is regenerated.
+- **No `scripts/` or `assets/` exist** in any skill, despite the conventions block above describing them.
+
+Tracking: the remediation plan covers content repair, per-category verification checklists, description rewrites, plugin packaging and CI validation.
 
 ---
 
 ## Full skill index
+
+<!-- BEGIN:INDEX -->
 
 ### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (80 skills)
 
@@ -451,3 +488,5 @@ skill-id/
 | `prompt-library-curator` | Prompt Library Curator |
 | `skill-linter` | Skill Linter |
 | `skill-router` | Skill Router |
+
+<!-- END:INDEX -->
