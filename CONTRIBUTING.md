@@ -10,7 +10,25 @@ See each category repo's `CONTRIBUTING.md` for skill-creator rules.
 
 1. Go to the matching category repo (e.g. [skills-developer](https://github.com/prvthmpcypher/skills-developer))
 2. Follow that repo's `CONTRIBUTING.md`
-3. Once merged there, open a PR here to add the skill to the index table in `README.md`
+3. Run the validator before opening a PR — CI runs the same checks:
+
+   ```bash
+   python scripts/validate.py --repo <category>
+   ```
+
+4. Do **not** edit the index in `README.md` by hand. It is generated:
+
+   ```bash
+   python scripts/build_index.py --write
+   ```
+
+## What the validator enforces
+
+The rule that matters most: **descriptions must be under 250 characters with the trigger clause inside them.** Claude truncates the description at roughly that point when deciding whether to load a skill, so a trigger sitting at the end of a 400-character description does nothing.
+
+It also checks that `name` matches the folder, that no description triggers on the skill's own name, that reference files are linked from the body, and that the verification checklist matches the skill's domain (`taxonomy/checklists.yaml`).
+
+If a new skill overlaps an existing one, its description must name the sibling. `python scripts/overlap.py` finds the collisions and prints the phrases they collide on.
 
 ## Repo links
 

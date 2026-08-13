@@ -17,7 +17,8 @@ Usage:
     python scripts/overlap.py                          # markdown worklist
     python scripts/overlap.py --min-score 4            # longer tail
     python scripts/overlap.py --json > work/overlap.json
-    python scripts/overlap.py --regress work/overlap.json    # after the rewrite
+    python scripts/overlap.py --check-boundaries       # CI: every cluster names a sibling
+    python scripts/overlap.py --regress work/overlap.json    # same, plus score movement
 """
 
 from __future__ import annotations
@@ -227,16 +228,30 @@ def main() -> int:
     # Drop to ~6 for a longer tail once the top clusters are resolved.
     parser.add_argument("--min-score", type=float, default=10.0)
     parser.add_argument("--json", action="store_true")
-    parser.add_argument("--regress", help="baseline JSON; fail if scores did not improve")
+    parser.add_argument(
+        "--check-boundaries",
+        action="store_true",
+        help="fail if any clustered skill does not name a sibling",
+    )
+    parser.add_argument(
+        "--regress",
+        nargs="?",
+        const="",
+        help="same check, plus informational score movement against a baseline JSON",
+    )
     parser.add_argument("--top-concepts", type=int, default=8)
     args = parser.parse_args()
 
     skills, discriminative, pairs, shared, clusters = build(args.min_score)
 
-    if args.regress:
-        baseline = {tuple(k.split("||")): v for k, v in json.loads(Path(args.regress).read_text()).items()}
-        current = dict(pairs)
-        worse = [p for p, s in current.items() if s > baseline.get(p, 0) + 1e-9]
+    if args.check_boundaries or args.regress is not None:
+        # The baseline is optional: it only produces informational score
+        # movement. The pass/fail criterion is boundaries, so CI does not
+        # need a committed baseline file.
+        worse = []
+        if args.regress:
+            baseline = {tuple(k.split("||")): v for k, v in json.loads(Path(args.regress).read_text()).items()}
+            worse = [p for p, s in dict(pairs).items() if s > baseline.get(p, 0) + 1e-9]
         slugs = {s.slug for s in skills.values()}
         unbounded = [
             rel

@@ -1,0 +1,58 @@
+name: validate
+
+# The hub cannot see the category repos without checking them out. Every repo
+# is public, so plain actions/checkout works with no token, no submodules and
+# no manifest-publishing pipeline between them.
+#
+# A push to a category repo does not trigger this. That is deliberate: the
+# per-repo workflow already catches skill-level problems, so the only thing
+# this adds is index and manifest drift, and a nightly run closes that fast
+# enough. Add repository_dispatch if a day ever turns out to be too slow.
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: skillary
+
+      - name: Check out the category repos
+        run: |
+          for c in business design developer education finance gamedev \
+                   marketing meta personal sales-support specialized writing; do
+            git clone --depth 1 "https://github.com/prvthmpcypher/skills-$c.git" "skills-$c"
+          done
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml
+
+      - name: Skills validate
+        working-directory: skillary
+        run: python scripts/validate.py
+
+      - name: README index is current
+        working-directory: skillary
+        run: python scripts/build_index.py --check
+
+      - name: Manifests are current
+        working-directory: skillary
+        run: python scripts/gen_manifests.py --check
+
+      - name: Bundles match their source
+        working-directory: skillary
+        run: python scripts/bundle.py --check
+
+      - name: Overlapping skills name a sibling
+        working-directory: skillary
+        run: python scripts/overlap.py --check-boundaries
