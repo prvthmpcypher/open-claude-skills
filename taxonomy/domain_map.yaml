@@ -1,0 +1,119 @@
+# Which verification archetype each skill gets.
+#
+# Repo name alone is not a sufficient key. skills-specialized spans compliance,
+# healthcare, legal, HR, real estate and logistics; skills-business spans ops,
+# strategy, PM and freelancing; and skills-developer contains changelog-writer
+# and code-comment-writer, which are writing tasks wearing an engineering badge.
+#
+# So: a default per repo, then explicit overrides. Review THIS file once instead
+# of reviewing 315 diffs - it is where all the judgment lives.
+
+defaults:
+  skills-developer: engineering
+  skills-gamedev: engineering
+  skills-design: creative-visual
+  skills-writing: content-writing
+  skills-marketing: go-to-market
+  skills-education: instructional
+  skills-finance: analysis-quant
+  skills-personal: personal-planning
+  skills-business: ops-process
+  skills-sales-support: go-to-market
+  skills-specialized: ops-process
+  skills-meta: content-writing
+
+overrides:
+
+  # --- writing tasks living in the developer repo ---
+  changelog-writer: content-writing
+  code-comment-writer: content-writing
+  readme-generator: content-writing
+  environment-setup-guide: content-writing
+  bug-explainer: content-writing
+  codebase-onboarding-engineer: content-writing
+
+  # --- regulated advice: jurisdiction and a licensed-professional boundary ---
+  tax-strategist: advisory-regulated
+  crypto-tax-advisor: advisory-regulated
+  insurance-actuary-analyst: advisory-regulated
+  healthcare-compliance-auditor: advisory-regulated
+  medical-billing-coder: advisory-regulated
+  legal-practice-assistant: advisory-regulated
+  contract-clause-explainer: advisory-regulated
+  regulatory-compliance-officer: advisory-regulated
+  data-privacy-officer: advisory-regulated
+  loan-officer-assistant: advisory-regulated
+  real-estate-advisor: advisory-regulated
+  legal-compliance-checker: advisory-regulated
+  esg-sustainability-officer: advisory-regulated
+  civil-engineer: advisory-regulated
+  grant-writer: advisory-regulated
+
+  # --- quantitative analysis outside the finance repo ---
+  pricing-analyst: analysis-quant
+  business-plan-outliner: analysis-quant
+  investor-pitch-deck-writer: analysis-quant
+  board-deck-builder: analysis-quant
+  experiment-tracker: analysis-quant
+  productivity-audit: analysis-quant
+  trend-researcher: analysis-quant
+  supply-chain-strategist: analysis-quant
+  model-qa-evaluator: analysis-quant
+  heatmap-interpreter: analysis-quant
+  pipeline-analyst: analysis-quant
+  churn-analyst: analysis-quant
+  playtest-feedback-analyzer: analysis-quant
+
+  # --- engineering work sitting in specialized ---
+  agentic-identity-and-trust-architect: engineering
+  agents-orchestrator: engineering
+  automation-governance-architect: engineering
+  data-consolidation-agent: engineering
+  identity-graph-operator: engineering
+  lsp-index-engineer: engineering
+  mcp-builder: engineering
+  salesforce-architect: engineering
+  workflow-architect: engineering
+  zk-steward: engineering
+  document-generator: engineering
+  report-distribution-agent: engineering
+  accounts-payable-agent: engineering
+  sales-data-extraction-agent: engineering
+
+  # --- teaching and enablement outside the education repo ---
+  corporate-training-designer: instructional
+  developer-advocate: instructional
+  mentor-simulator: instructional
+  concept-explainer: instructional
+  sales-coach: instructional
+  decision-framework: instructional
+  mental-model-teacher: instructional
+
+  # --- writing-shaped business and specialized skills ---
+  client-proposal-writer: content-writing
+  job-description-writer: content-writing
+  meeting-summariser: content-writing
+  sop-writer: content-writing
+  language-translator: content-writing
+  upwork: content-writing
+  upwork-proposal: content-writing
+  feedback-giver: content-writing
+
+  # --- people and org process ---
+  hr-onboarding: ops-process
+  talent-acquisition-manager: ops-process
+  organizational-psychologist: ops-process
+  hiring-plan-org-chart-builder: ops-process
+  cultural-intelligence-strategist: ops-process
+  chief-of-staff: ops-process
+  change-management-consultant: ops-process
+  m-and-a-integration-manager: ops-process
+  customer-success-manager: ops-process
+  operations-manager: ops-process
+  government-digital-presales-consultant: go-to-market
+  business-strategist: analysis-quant
+
+  # --- meta skills operate on the library itself ---
+  skill-router: content-writing
+  skill-linter: content-writing
+  prompt-library-curator: content-writing

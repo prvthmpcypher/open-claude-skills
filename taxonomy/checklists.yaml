@@ -1,0 +1,116 @@
+# Per-domain verification checklists and anti-patterns.
+#
+# 281 skills carried a software-engineering QA checklist regardless of domain -
+# every finance and education skill was told to verify that its code compiles.
+# This file is what replaces that content.
+#
+# Seeded from the 32 hand-written checklists already in the library rather than
+# invented. Those set the standard: concrete, checkable, domain-specific, and
+# naming the actual standard where one exists (RFC 7807, MITRE ATT&CK,
+# OpenAPI 3.1, DORA). A generic checklist is only marginally better than a
+# wrong one, so anything vague enough to apply everywhere does not belong here.
+#
+# Skills whose existing sections do NOT match the boilerplate fingerprint are
+# never touched - see fix_sections.py.
+
+archetypes:
+
+  engineering:
+    verification:
+      - "Code compiles and all automated tests and typechecks pass without new warnings."
+      - "Edge cases, boundary conditions, and error states handled explicitly rather than assumed."
+      - "No hardcoded secrets, credentials, or insecure defaults introduced."
+      - "Changes are covered by a test that fails without them."
+    anti_patterns:
+      - "NEVER weaken or skip a failing test to make a change land."
+      - "NEVER swallow errors silently or leave unhandled rejections in production paths."
+      - "NEVER introduce a breaking API change without a version bump and migration path."
+
+  analysis-quant:
+    verification:
+      - "Every input figure traced to a named source with an as-of date."
+      - "Arithmetic reconciles: components tie to totals, periods tie to the annual figure."
+      - "Each assumption stated explicitly with a plausible range, not a single point."
+      - "Sensitivity shown on the three drivers with the largest effect on the result."
+      - "Units, currency, and time period labelled on every figure presented."
+    anti_patterns:
+      - "NEVER present a point estimate without the assumptions behind it."
+      - "NEVER mix fiscal and calendar periods without labelling which is which."
+      - "NEVER imply licensed tax, audit, or investment advice - state the boundary."
+
+  advisory-regulated:
+    verification:
+      - "Jurisdiction and effective date stated for every rule or threshold cited."
+      - "Governing authority or regulation named, not paraphrased generically."
+      - "Scope-of-advice boundary stated explicitly in the output."
+      - "A named human review step identified before anything is acted on."
+    anti_patterns:
+      - "NEVER give jurisdiction-specific legal, medical, or tax advice without naming the jurisdiction."
+      - "NEVER omit the boundary that a licensed professional must review the result."
+      - "NEVER present a rule as current without stating the date it was checked."
+
+  creative-visual:
+    verification:
+      - "Contrast and legibility verified at the smallest intended display size."
+      - "Dimensions, bleed, and safe areas match the named output medium."
+      - "Colour is never the sole carrier of meaning - icons or text accompany it."
+      - "Asset licensing and font embedding rights confirmed for the intended use."
+    anti_patterns:
+      - "NEVER deliver a design without stating the medium and its constraints."
+      - "NEVER rely on colour alone to convey state, status, or meaning."
+      - "NEVER hand off exports without confirming the target platform's specs."
+
+  content-writing:
+    verification:
+      - "Every factual claim and statistic traced to a citable source."
+      - "Reading level and terminology matched to the stated audience."
+      - "Length and formatting fit the destination channel's limits."
+      - "One clear call to action, placed where the reader will still be reading."
+    anti_patterns:
+      - "NEVER invent statistics, quotes, or sources."
+      - "NEVER present an unverified figure as sourced."
+      - "NEVER bury the central point below preamble the reader will not reach."
+
+  go-to-market:
+    verification:
+      - "Success metric and its current baseline defined before launch, not after."
+      - "Target segment named specifically enough to exclude someone."
+      - "Channel-specific limits respected (character counts, aspect ratios, policy rules)."
+      - "Compliance checked for the channel (CAN-SPAM, GDPR, platform ad policy)."
+    anti_patterns:
+      - "NEVER launch without a stated kill criterion and review date."
+      - "NEVER claim a result without naming the attribution window and method."
+      - "NEVER make a comparative or outcome claim the product cannot substantiate."
+
+  instructional:
+    verification:
+      - "Learning objective stated in terms of what the learner will be able to do."
+      - "Prerequisites listed explicitly before the first new concept."
+      - "At least one fully worked example, not only an abstract explanation."
+      - "Every assessment item maps to a stated objective."
+    anti_patterns:
+      - "NEVER assess material that was not taught."
+      - "NEVER present one contested framework as settled consensus."
+      - "NEVER introduce a term before defining it or linking its prerequisite."
+
+  ops-process:
+    verification:
+      - "Each step has a named owner, not a team-shaped placeholder."
+      - "Inputs and outputs defined for every step, including their format."
+      - "Failure and escalation path defined for the steps that can block."
+      - "Completion is measurable - someone can tell whether it is done."
+    anti_patterns:
+      - "NEVER automate a process before redesigning the parts that are broken."
+      - "NEVER map a current state without input from the people who do the work."
+      - "NEVER hand off a process without naming who owns it next."
+
+  personal-planning:
+    verification:
+      - "The person's actual stated constraints captured, not assumed defaults."
+      - "Plan is adjustable and states what to do when a week is missed."
+      - "Cadence is realistic against the time the person actually said they have."
+      - "Medical, legal, and financial limits respected and stated."
+    anti_patterns:
+      - "NEVER give clinical, dietary, or dosage advice as though prescribing."
+      - "NEVER build a plan on unstated assumptions about someone's life or income."
+      - "NEVER set a cadence the person has not agreed is achievable."
