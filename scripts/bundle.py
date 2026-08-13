@@ -63,6 +63,18 @@ def members(skill) -> list[tuple[str, bytes]]:
     return out
 
 
+def contents(path: Path) -> dict[str, bytes]:
+    """What a bundle actually holds, ignoring how it was compressed.
+
+    Comparing the zip's raw bytes looks stricter but is wrong: deflate output
+    differs between zlib versions, so a bundle written under one Python is
+    reported stale under another. CI runs 3.12, this machine runs 3.14, and
+    every bundle read as stale until this compared members instead.
+    """
+    with zipfile.ZipFile(path) as archive:
+        return {name: archive.read(name) for name in archive.namelist()}
+
+
 def build_bytes(skill) -> bytes:
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as archive:
@@ -92,9 +104,9 @@ def main() -> int:
                 if args.clean or args.write:
                     existing.unlink()
 
-        data = build_bytes(skill)
-        if target.exists() and target.read_bytes() == data:
+        if target.exists() and contents(target) == dict(members(skill)):
             continue
+        data = build_bytes(skill)
 
         if args.write:
             target.write_bytes(data)
