@@ -52,7 +52,14 @@ def members(skill) -> list[tuple[str, bytes]]:
         if "__pycache__" in path.parts:
             continue
         arcname = f"{skill.slug}/{path.relative_to(skill.path).as_posix()}"
-        out.append((arcname, path.read_bytes()))
+        data = path.read_bytes()
+        # Normalise line endings for text content. Without this the bundle
+        # captures whatever the working tree has - CRLF on Windows, LF on Linux
+        # - so the same commit produces different bytes per platform and the
+        # check can never pass in CI. Git stores LF, so the bundle stores LF.
+        if b"\x00" not in data:
+            data = data.replace(b"\r\n", b"\n")
+        out.append((arcname, data))
     return out
 
 
