@@ -8,7 +8,7 @@ See each category repo's `CONTRIBUTING.md` for skill-creator rules.
 
 ## Adding a new skill
 
-1. Go to the matching category repo (e.g. [skills-developer](https://github.com/prvthmpcypher/skills-developer))
+1. Go to the matching category repo (e.g. [skills-developer](https://github.com/poorvith-mp/skills-developer))
 2. Follow that repo's `CONTRIBUTING.md`
 3. Run the validator before opening a PR — CI runs the same checks:
 
@@ -34,15 +34,15 @@ If a new skill overlaps an existing one, its description must name the sibling. 
 
 | Repo | URL |
 |------|-----|
-| skills-developer | https://github.com/prvthmpcypher/skills-developer |
-| skills-marketing | https://github.com/prvthmpcypher/skills-marketing |
-| skills-specialized | https://github.com/prvthmpcypher/skills-specialized |
-| skills-design | https://github.com/prvthmpcypher/skills-design |
-| skills-business | https://github.com/prvthmpcypher/skills-business |
-| skills-gamedev | https://github.com/prvthmpcypher/skills-gamedev |
-| skills-education | https://github.com/prvthmpcypher/skills-education |
-| skills-personal | https://github.com/prvthmpcypher/skills-personal |
-| skills-writing | https://github.com/prvthmpcypher/skills-writing |
-| skills-sales-support | https://github.com/prvthmpcypher/skills-sales-support |
-| skills-finance | https://github.com/prvthmpcypher/skills-finance |
-| skills-meta | https://github.com/prvthmpcypher/skills-meta |
+| skills-developer | https://github.com/poorvith-mp/skills-developer |
+| skills-marketing | https://github.com/poorvith-mp/skills-marketing |
+| skills-specialized | https://github.com/poorvith-mp/skills-specialized |
+| skills-design | https://github.com/poorvith-mp/skills-design |
+| skills-business | https://github.com/poorvith-mp/skills-business |
+| skills-gamedev | https://github.com/poorvith-mp/skills-gamedev |
+| skills-education | https://github.com/poorvith-mp/skills-education |
+| skills-personal | https://github.com/poorvith-mp/skills-personal |
+| skills-writing | https://github.com/poorvith-mp/skills-writing |
+| skills-sales-support | https://github.com/poorvith-mp/skills-sales-support |
+| skills-finance | https://github.com/poorvith-mp/skills-finance |
+| skills-meta | https://github.com/poorvith-mp/skills-meta |

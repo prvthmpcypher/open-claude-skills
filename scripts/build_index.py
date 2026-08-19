@@ -37,7 +37,7 @@ REGIONS = {
     "INDEX": ("<!-- BEGIN:INDEX -->", "<!-- END:INDEX -->"),
 }
 
-OWNER = "prvthmpcypher"
+OWNER = "poorvith-mp"
 
 # Display names for the 12 repos, in the order the index presents them
 # (largest first, as the current README does).

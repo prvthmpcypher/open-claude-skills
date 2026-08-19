@@ -1,6 +1,6 @@
 # skillary
 
-Central index for the Claude skills multi-repo library by [@prvthmpcypher](https://github.com/prvthmpcypher).
+Central index for the Claude skills multi-repo library by [@poorvith-mp](https://github.com/poorvith-mp).
 
 - Version: **v2.1.0**
 - Last updated: **August 2026**
@@ -17,18 +17,18 @@ Each category is its own repo and its own installable plugin, so you take only t
 
 | Category | Repository | Skills |
 |----------|------------|--------|
-| Developer | [skills-developer](https://github.com/prvthmpcypher/skills-developer) | 80 |
-| Marketing | [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) | 52 |
-| Specialized | [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) | 41 |
-| Design | [skills-design](https://github.com/prvthmpcypher/skills-design) | 29 |
-| Business | [skills-business](https://github.com/prvthmpcypher/skills-business) | 29 |
-| Game Dev | [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) | 22 |
-| Sales & Support | [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) | 17 |
-| Education | [skills-education](https://github.com/prvthmpcypher/skills-education) | 15 |
-| Finance | [skills-finance](https://github.com/prvthmpcypher/skills-finance) | 12 |
-| Personal | [skills-personal](https://github.com/prvthmpcypher/skills-personal) | 10 |
-| Writing | [skills-writing](https://github.com/prvthmpcypher/skills-writing) | 5 |
-| Meta | [skills-meta](https://github.com/prvthmpcypher/skills-meta) | 3 |
+| Developer | [skills-developer](https://github.com/poorvith-mp/skills-developer) | 80 |
+| Marketing | [skills-marketing](https://github.com/poorvith-mp/skills-marketing) | 52 |
+| Specialized | [skills-specialized](https://github.com/poorvith-mp/skills-specialized) | 41 |
+| Design | [skills-design](https://github.com/poorvith-mp/skills-design) | 29 |
+| Business | [skills-business](https://github.com/poorvith-mp/skills-business) | 29 |
+| Game Dev | [skills-gamedev](https://github.com/poorvith-mp/skills-gamedev) | 22 |
+| Sales & Support | [skills-sales-support](https://github.com/poorvith-mp/skills-sales-support) | 17 |
+| Education | [skills-education](https://github.com/poorvith-mp/skills-education) | 15 |
+| Finance | [skills-finance](https://github.com/poorvith-mp/skills-finance) | 12 |
+| Personal | [skills-personal](https://github.com/poorvith-mp/skills-personal) | 10 |
+| Writing | [skills-writing](https://github.com/poorvith-mp/skills-writing) | 5 |
+| Meta | [skills-meta](https://github.com/poorvith-mp/skills-meta) | 3 |
 
 **Total: 315 skills across 12 repositories.**
 
@@ -50,7 +50,7 @@ This repo is an index and a plugin marketplace. It contains no skills itself —
 ### Claude Code
 
 ```bash
-/plugin marketplace add prvthmpcypher/skillary
+/plugin marketplace add poorvith-mp/skillary
 /plugin install skills-finance@skillary
 ```
 
@@ -59,9 +59,9 @@ This repo is an index and a plugin marketplace. It contains no skills itself —
 `npx skills` reads the manifests in these repos, so no custom installer is needed:
 
 ```bash
-npx skills add prvthmpcypher/skills-finance
-npx skills add prvthmpcypher/skills-finance/fp-and-a-analyst   # one skill
-npx skills add prvthmpcypher/skills-finance -g                 # user-global
+npx skills add poorvith-mp/skills-finance
+npx skills add poorvith-mp/skills-finance/fp-and-a-analyst   # one skill
+npx skills add poorvith-mp/skills-finance -g                 # user-global
 ```
 
 ### Manual
@@ -69,7 +69,7 @@ npx skills add prvthmpcypher/skills-finance -g                 # user-global
 Clone the **category** repo, not this one, then copy the folder you want:
 
 ```bash
-git clone https://github.com/prvthmpcypher/skills-finance
+git clone https://github.com/poorvith-mp/skills-finance
 cp -R skills-finance/skills/fp-and-a-analyst ~/.claude/skills/
 ```
 
@@ -132,7 +132,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 
 <!-- BEGIN:INDEX -->
 
-### Developer — [skills-developer](https://github.com/prvthmpcypher/skills-developer) (80 skills)
+### Developer — [skills-developer](https://github.com/poorvith-mp/skills-developer) (80 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -217,7 +217,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `wechat-mini-program-developer` | Wechat Mini Program Developer |
 | `workflow-optimizer` | Workflow Optimizer |
 
-### Marketing — [skills-marketing](https://github.com/prvthmpcypher/skills-marketing) (52 skills)
+### Marketing — [skills-marketing](https://github.com/poorvith-mp/skills-marketing) (52 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -274,7 +274,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `youtube-clipper` | Youtube Clipper |
 | `zhihu-strategist` | Zhihu Strategist |
 
-### Specialized — [skills-specialized](https://github.com/prvthmpcypher/skills-specialized) (41 skills)
+### Specialized — [skills-specialized](https://github.com/poorvith-mp/skills-specialized) (41 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -320,7 +320,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `workflow-architect` | Workflow Architect |
 | `zk-steward` | ZK Steward |
 
-### Design — [skills-design](https://github.com/prvthmpcypher/skills-design) (29 skills)
+### Design — [skills-design](https://github.com/poorvith-mp/skills-design) (29 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -354,7 +354,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `youtube-popup-graphic` | Youtube Popup Graphic |
 | `youtube-thumbnail-maker` | Youtube Thumbnail Maker |
 
-### Business — [skills-business](https://github.com/prvthmpcypher/skills-business) (29 skills)
+### Business — [skills-business](https://github.com/poorvith-mp/skills-business) (29 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -388,7 +388,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `vendor-procurement-manager` | Vendor Procurement Manager |
 | `workflow-redesign-consultant` | Workflow Redesign Consultant |
 
-### Game Dev — [skills-gamedev](https://github.com/prvthmpcypher/skills-gamedev) (22 skills)
+### Game Dev — [skills-gamedev](https://github.com/poorvith-mp/skills-gamedev) (22 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -415,7 +415,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `unreal-technical-artist` | Unreal Technical Artist |
 | `unreal-world-builder` | Unreal World Builder |
 
-### Sales & Support — [skills-sales-support](https://github.com/prvthmpcypher/skills-sales-support) (17 skills)
+### Sales & Support — [skills-sales-support](https://github.com/poorvith-mp/skills-sales-support) (17 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -437,7 +437,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `sales-engineer` | Sales Engineer |
 | `sales-outreach` | Sales Outreach |
 
-### Education — [skills-education](https://github.com/prvthmpcypher/skills-education) (15 skills)
+### Education — [skills-education](https://github.com/poorvith-mp/skills-education) (15 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -457,7 +457,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `study-abroad-advisor` | Study Abroad Advisor |
 | `study-plan-builder` | Study Plan Builder |
 
-### Finance — [skills-finance](https://github.com/prvthmpcypher/skills-finance) (12 skills)
+### Finance — [skills-finance](https://github.com/poorvith-mp/skills-finance) (12 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -474,7 +474,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `invoice-and-payment-writer` | Invoice And Payment Writer |
 | `tax-strategist` | Tax Strategist |
 
-### Personal — [skills-personal](https://github.com/prvthmpcypher/skills-personal) (10 skills)
+### Personal — [skills-personal](https://github.com/poorvith-mp/skills-personal) (10 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -489,7 +489,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `second-brain-architect` | Second Brain Architect |
 | `travel-planner` | Travel Planner |
 
-### Writing — [skills-writing](https://github.com/prvthmpcypher/skills-writing) (5 skills)
+### Writing — [skills-writing](https://github.com/poorvith-mp/skills-writing) (5 skills)
 
 | Skill ID | Title |
 |----------|-------|
@@ -499,7 +499,7 @@ Still open: no skill ships `scripts/` or `assets/` yet, so every skill is instru
 | `technical-writer` | Technical Writer |
 | `thread-to-blog-converter` | Thread To Blog Converter |
 
-### Meta — [skills-meta](https://github.com/prvthmpcypher/skills-meta) (3 skills)
+### Meta — [skills-meta](https://github.com/poorvith-mp/skills-meta) (3 skills)
 
 | Skill ID | Title |
 |----------|-------|
