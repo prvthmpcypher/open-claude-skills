@@ -28,7 +28,7 @@ jobs:
         run: |
           for c in business design developer education finance gamedev \
                    marketing meta personal sales-support specialized writing; do
-            git clone --depth 1 "https://github.com/prvthmpcypher/skills-$c.git" "skills-$c"
+            git clone --depth 1 "https://github.com/poorvith-mp/skills-$c.git" "skills-$c"
           done
 
       - uses: actions/setup-python@v5
