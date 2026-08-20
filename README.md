@@ -1,4 +1,8 @@
+<p align="center"><img src="docs/assets/logo.svg" width="88" alt="Skillary logo"></p>
+
 # skillary
+
+![Skillary — focused skills for AI agents](docs/assets/cover.svg)
 
 Central index for the Claude skills multi-repo library by [@poorvith-mp](https://github.com/poorvith-mp).
 
